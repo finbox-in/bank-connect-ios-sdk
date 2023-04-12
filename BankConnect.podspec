@@ -78,7 +78,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "http://EXAMPLE/BankConnect.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "git@gitlab.com:finbox/bankconnect/mobile/ios-bank-connect.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
