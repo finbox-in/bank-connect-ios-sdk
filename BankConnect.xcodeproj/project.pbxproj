@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3725F45429E700E80042189F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 3725F45329E700E80042189F /* LICENSE */; };
 		379A3CE629E632AB008990FE /* BankConnect.docc in Sources */ = {isa = PBXBuildFile; fileRef = 379A3CE529E632AB008990FE /* BankConnect.docc */; };
 		379A3CEC29E632AC008990FE /* BankConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379A3CE129E632AB008990FE /* BankConnect.framework */; };
 		379A3CF129E632AC008990FE /* BankConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379A3CF029E632AC008990FE /* BankConnectTests.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3725F45329E700E80042189F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		379A3CE129E632AB008990FE /* BankConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BankConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		379A3CE429E632AB008990FE /* BankConnect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BankConnect.h; sourceTree = "<group>"; };
 		379A3CE529E632AB008990FE /* BankConnect.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = BankConnect.docc; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 		379A3CD729E632AB008990FE = {
 			isa = PBXGroup;
 			children = (
+				3725F45329E700E80042189F /* LICENSE */,
 				37BD8C1729E6EA1A00EF4DB7 /* BankConnect.podspec */,
 				379A3CE329E632AB008990FE /* BankConnect */,
 				379A3CEF29E632AC008990FE /* BankConnectTests */,
@@ -244,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3725F45429E700E80042189F /* LICENSE in Resources */,
 				37BD8C1829E6EA1A00EF4DB7 /* BankConnect.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
