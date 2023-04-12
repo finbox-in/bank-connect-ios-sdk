@@ -7,7 +7,7 @@ import SwiftUI
 
 public struct BankView: View {
     
-    @StateObject var viewModel = SessionViewModel()
+    @ObservedObject var viewModel = SessionViewModel()
     
     public var body: some View {
         VStack {
