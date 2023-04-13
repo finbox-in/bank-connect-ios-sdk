@@ -7,6 +7,10 @@ import SwiftUI
 
 public struct BankView: View {
     
+    public init() {
+        
+    }
+    
     @ObservedObject var viewModel = SessionViewModel()
     
     public var body: some View {
