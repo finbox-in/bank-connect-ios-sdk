@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "BankConnect"
-  spec.version      = "0.0.9"
+  spec.version      = "0.1.0"
   spec.summary      = "BankConnect IOS SDK to enable BankConnect journey for IOS devices"
 
   # This description is used to generate tags and improve search results.
@@ -26,7 +26,7 @@ Pod::Spec.new do |spec|
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = "FinBox BankConnect allows users to submit their bank account statements in your app, then processes them and shares the enriched data with you. This SDK will help you integrate BankConnect in your application flow."
 
-  spec.homepage     = "https://gitlab.com/finbox/bankconnect/mobile/ios-bankconnect"
+  spec.homepage     = "https://gitlab.com/finbox/bankconnect/mobile/ios-bank-connect"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
