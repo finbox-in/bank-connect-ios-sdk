@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "BankConnect"
-  spec.version      = "0.1.1"
+  spec.version      = "0.1.2"
   spec.summary      = "BankConnect IOS SDK to enable BankConnect journey for IOS devices"
 
   # This description is used to generate tags and improve search results.
@@ -52,7 +52,6 @@ Pod::Spec.new do |spec|
   #
 
   spec.author             = { "Srikar Reddy" => "srikar@finbox.in" }
-  # Or just: spec.author    = "stillecodeur"
   # spec.authors            = { "stillecodeur" => "stillecodeur@gmail.com" }
   # spec.social_media_url   = "https://twitter.com/stillecodeur"
 

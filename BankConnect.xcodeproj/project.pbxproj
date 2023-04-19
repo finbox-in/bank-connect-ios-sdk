@@ -35,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		3725F45329E700E80042189F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		3799D2B129EFC4090077FEED /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		379A3CE129E632AB008990FE /* BankConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BankConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		379A3CE429E632AB008990FE /* BankConnect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BankConnect.h; sourceTree = "<group>"; };
 		379A3CE529E632AB008990FE /* BankConnect.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = BankConnect.docc; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 		379A3CD729E632AB008990FE = {
 			isa = PBXGroup;
 			children = (
+				3799D2B129EFC4090077FEED /* CHANGELOG.md */,
 				3725F45329E700E80042189F /* LICENSE */,
 				37BD8C1729E6EA1A00EF4DB7 /* BankConnect.podspec */,
 				379A3CE329E632AB008990FE /* BankConnect */,

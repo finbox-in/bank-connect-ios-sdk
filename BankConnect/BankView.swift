@@ -19,8 +19,10 @@ public struct BankView: View {
                 // Load the webpage
                 FinBoxWebView(urlStr: viewModel.sessionUrl)
             } else {
-                // Show progress
-                ProgressView()
+                if #available(iOS 14, *) {
+                    // Show progress
+                    ProgressView()
+                }
             }
 
         }.onAppear(perform: {
