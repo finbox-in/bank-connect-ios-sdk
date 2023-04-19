@@ -6,13 +6,13 @@
 import SwiftUI
 
 public struct BankView: View {
-    
+
     public init() {
         
     }
-    
+
     @ObservedObject var viewModel = SessionViewModel()
-    
+
     public var body: some View {
         VStack {
             if (viewModel.sessionUrl != nil) {
@@ -22,10 +22,13 @@ public struct BankView: View {
                 if #available(iOS 14, *) {
                     // Show progress
                     ProgressView()
+                } else {
+                    // Progress View is not available
                 }
             }
 
         }.onAppear(perform: {
+            // Fetch the session url
             viewModel.fetch()
         })
     }
