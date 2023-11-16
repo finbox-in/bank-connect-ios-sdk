@@ -1,0 +1,38 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ arm64-ios ]
+flags:           [ not_app_extension_safe ]
+install-name:    '@rpath/BankConnect.framework/BankConnect'
+swift-abi-version: 7
+exports:
+  - targets:         [ arm64-ios ]
+    symbols:         [ '_$s11BankConnect06FinBoxaB0C7BuilderC2id33_5DDFF4E82BFA660BCED5D3C5A11B7E75LLSSSgvpfi', 
+                       '_$s11BankConnect06FinBoxaB0C7BuilderC3end33_5DDFF4E82BFA660BCED5D3C5A11B7E75LLSSSgvpfi', 
+                       '_$s11BankConnect06FinBoxaB0C7BuilderC3key33_5DDFF4E82BFA660BCED5D3C5A11B7E75LLSSSgvpfi', 
+                       '_$s11BankConnect06FinBoxaB0C7BuilderC4bank4nameAESS_tF', 
+                       '_$s11BankConnect06FinBoxaB0C7BuilderC4bank4nameAESS_tFTq', 
+                       '_$s11BankConnect06FinBoxaB0C7BuilderC4name33_5DDFF4E82BFA660BCED5D3C5A11B7E75LLSSSgvpfi', 
+                       '_$s11BankConnect06FinBoxaB0C7BuilderC5buildACyF', '_$s11BankConnect06FinBoxaB0C7BuilderC5buildACyFTq', 
+                       '_$s11BankConnect06FinBoxaB0C7BuilderC5start33_5DDFF4E82BFA660BCED5D3C5A11B7E75LLSSSgvpfi', 
+                       '_$s11BankConnect06FinBoxaB0C7BuilderC6apiKey3keyAESS_tF', 
+                       '_$s11BankConnect06FinBoxaB0C7BuilderC6apiKey3keyAESS_tFTq', 
+                       '_$s11BankConnect06FinBoxaB0C7BuilderC6linkId2idAESS_tF', 
+                       '_$s11BankConnect06FinBoxaB0C7BuilderC6linkId2idAESS_tFTq', 
+                       '_$s11BankConnect06FinBoxaB0C7BuilderC6toDate3endAESS_tF', 
+                       '_$s11BankConnect06FinBoxaB0C7BuilderC6toDate3endAESS_tFTq', 
+                       '_$s11BankConnect06FinBoxaB0C7BuilderC8fromDate5startAESS_tF', 
+                       '_$s11BankConnect06FinBoxaB0C7BuilderC8fromDate5startAESS_tFTq', 
+                       '_$s11BankConnect06FinBoxaB0C7BuilderCAEycfC', '_$s11BankConnect06FinBoxaB0C7BuilderCAEycfCTq', 
+                       '_$s11BankConnect06FinBoxaB0C7BuilderCAEycfc', '_$s11BankConnect06FinBoxaB0C7BuilderCMa', 
+                       '_$s11BankConnect06FinBoxaB0C7BuilderCMm', '_$s11BankConnect06FinBoxaB0C7BuilderCMn', 
+                       '_$s11BankConnect06FinBoxaB0C7BuilderCN', '_$s11BankConnect06FinBoxaB0C7BuilderCfD', 
+                       '_$s11BankConnect06FinBoxaB0C7BuilderCfd', '_$s11BankConnect06FinBoxaB0CMa', 
+                       '_$s11BankConnect06FinBoxaB0CMm', '_$s11BankConnect06FinBoxaB0CMn', 
+                       '_$s11BankConnect06FinBoxaB0CN', '_$s11BankConnect06FinBoxaB0CfD', 
+                       '_$s11BankConnect06FinBoxaB0Cfd', '_$s11BankConnect0A4ViewV10_viewModel33_E058219522A49E67657B16BE73DF8986LL7SwiftUI14ObservedObjectVyAA07SessioncE0CGvpfi', 
+                       '_$s11BankConnect0A4ViewV4bodyQrvg', '_$s11BankConnect0A4ViewV4bodyQrvpMV', 
+                       '_$s11BankConnect0A4ViewV4bodyQrvpQOMQ', '_$s11BankConnect0A4ViewV7SwiftUI0C0AAMc', 
+                       '_$s11BankConnect0A4ViewV9viewModelAA07SessioncE0CvpfP', '_$s11BankConnect0A4ViewVACycfC', 
+                       '_$s11BankConnect0A4ViewVMa', '_$s11BankConnect0A4ViewVMn', 
+                       '_$s11BankConnect0A4ViewVN', _BankConnectVersionNumber, _BankConnectVersionString ]
+...

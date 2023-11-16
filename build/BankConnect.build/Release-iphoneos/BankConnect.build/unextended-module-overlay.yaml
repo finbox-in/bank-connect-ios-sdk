@@ -1,0 +1,23 @@
+{
+  'version': 0,
+  'use-external-names': 'false',
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/srikar/Work/Ios/BankConnect/build/Release-iphoneos/BankConnect.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/srikar/Work/Ios/BankConnect/build/BankConnect.build/Release-iphoneos/BankConnect.build/unextended-module.modulemap",
+    }]
+    },
+    {
+    'type': 'directory',
+    'name': "/Users/srikar/Work/Ios/BankConnect/build/Release-iphoneos/BankConnect.framework/Headers"
+    'contents': [{
+      'type': 'file',
+      'name': "BankConnect-Swift.h",
+      'external-contents': "/Users/srikar/Work/Ios/BankConnect/build/BankConnect.build/Release-iphoneos/BankConnect.build/unextended-interface-header.h",
+    }]
+    }]
+}
