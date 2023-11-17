@@ -12,7 +12,15 @@ struct FinBoxWebView: UIViewRepresentable {
     let urlStr: String?
     
     func makeUIView(context: Context) -> WKWebView  {
-        let webView = WKWebView()
+        // Create a configuration
+        let config = WKWebViewConfiguration()
+        // Create a user controller
+        config.userContentController = WKUserContentController()
+        // Set user controller
+        config.userContentController.add(FinBoxWebViewHandler(), name: "BankConnectFlutter")
+
+        // Create a webview
+        let webView = WKWebView(frame: .zero, configuration: config)
         return webView
     }
     

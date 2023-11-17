@@ -21,6 +21,7 @@
 		37BD8C1029E6E50100EF4DB7 /* SessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BD8C0F29E6E50100EF4DB7 /* SessionViewModel.swift */; };
 		37BD8C1229E6E52100EF4DB7 /* BankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BD8C1129E6E52100EF4DB7 /* BankView.swift */; };
 		37BD8C1829E6EA1A00EF4DB7 /* BankConnect.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 37BD8C1729E6EA1A00EF4DB7 /* BankConnect.podspec */; };
+		37CC071A2B079FE100538F5F /* FinBoxWebViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC07192B079FE100538F5F /* FinBoxWebViewHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		37BD8C0F29E6E50100EF4DB7 /* SessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewModel.swift; sourceTree = "<group>"; };
 		37BD8C1129E6E52100EF4DB7 /* BankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankView.swift; sourceTree = "<group>"; };
 		37BD8C1729E6EA1A00EF4DB7 /* BankConnect.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = BankConnect.podspec; sourceTree = "<group>"; };
+		37CC07192B079FE100538F5F /* FinBoxWebViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinBoxWebViewHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			children = (
 				37BD8C0D29E6E4F000EF4DB7 /* FinBoxWebView.swift */,
 				37BD8C0F29E6E50100EF4DB7 /* SessionViewModel.swift */,
+				37CC07192B079FE100538F5F /* FinBoxWebViewHandler.swift */,
 			);
 			path = webhelper;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37CC071A2B079FE100538F5F /* FinBoxWebViewHandler.swift in Sources */,
 				379A3CE629E632AB008990FE /* BankConnect.docc in Sources */,
 				37BD8C1029E6E50100EF4DB7 /* SessionViewModel.swift in Sources */,
 				37BD8C0829E6E4A800EF4DB7 /* SessionResponse.swift in Sources */,
