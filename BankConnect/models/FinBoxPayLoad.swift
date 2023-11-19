@@ -10,15 +10,15 @@ import Foundation
 public struct FinBoxPayload {
     
     // Additional Message
-    let message: String?
+    public let message: String?
     
     // Link Id for the session
-    let linkId: String?
+    public let linkId: String?
     
     // Entity id for the successful session
-    let entityId: String?
+    public let entityId: String?
     
     // Error type
-    let error_type: String?
+    public let error_type: String?
     
 }
