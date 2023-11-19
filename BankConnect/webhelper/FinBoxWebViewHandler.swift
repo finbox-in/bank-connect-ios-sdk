@@ -12,8 +12,19 @@ import WebKit
 class FinBoxWebViewHandler: NSObject, WKScriptMessageHandler {
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        debugPrint("User Content Controller")
-        debugPrint("Message Body", message.body)
+        debugPrint("Event Repsonse", message.body)
+        guard let bodyString = message.body as? String,
+              let bodyData = bodyString.data(using: .utf8) else {
+            debugPrint("Event Response is empty")
+            return
+        }
+
+        let eventResponse = try? JSONDecoder().decode(WebEventResponse.self, from: bodyData)
+        debugPrint("Entity Id", eventResponse?.payload.entityId ?? "Empty Entity Id")
+        
+        let payload = FinBoxPayload(message: eventResponse?.message, linkId: eventResponse?.payload.linkId, entityId: eventResponse?.payload.entityId, error_type: nil)
+        debugPrint("Callback Entity Id", payload.entityId ?? "Empty Entity Id")
+
     }
 }
 

@@ -1,5 +1,10 @@
 #  CHANGELOG
 
+## 0.1.5
+
+Capture event response from Web
+
+
 ## 0.1.4
 
 Add Webview configutation

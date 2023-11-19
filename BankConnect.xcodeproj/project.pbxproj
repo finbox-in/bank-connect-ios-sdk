@@ -22,6 +22,9 @@
 		37BD8C1229E6E52100EF4DB7 /* BankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BD8C1129E6E52100EF4DB7 /* BankView.swift */; };
 		37BD8C1829E6EA1A00EF4DB7 /* BankConnect.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 37BD8C1729E6EA1A00EF4DB7 /* BankConnect.podspec */; };
 		37CC071A2B079FE100538F5F /* FinBoxWebViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC07192B079FE100538F5F /* FinBoxWebViewHandler.swift */; };
+		37CC07D22B09E6F300538F5F /* WebEventResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC07D12B09E6F300538F5F /* WebEventResponse.swift */; };
+		37CC07D42B09E93600538F5F /* WebEventPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC07D32B09E93600538F5F /* WebEventPayload.swift */; };
+		37CC07D82B09F49B00538F5F /* FinBoxPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC07D72B09F49B00538F5F /* FinBoxPayload.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,9 @@
 		37BD8C1129E6E52100EF4DB7 /* BankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankView.swift; sourceTree = "<group>"; };
 		37BD8C1729E6EA1A00EF4DB7 /* BankConnect.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = BankConnect.podspec; sourceTree = "<group>"; };
 		37CC07192B079FE100538F5F /* FinBoxWebViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinBoxWebViewHandler.swift; sourceTree = "<group>"; };
+		37CC07D12B09E6F300538F5F /* WebEventResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebEventResponse.swift; sourceTree = "<group>"; };
+		37CC07D32B09E93600538F5F /* WebEventPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebEventPayload.swift; sourceTree = "<group>"; };
+		37CC07D72B09F49B00538F5F /* FinBoxPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinBoxPayload.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,8 +152,11 @@
 		37BD8BF929E6E3D000EF4DB7 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				37CC07D72B09F49B00538F5F /* FinBoxPayload.swift */,
 				37BD8C0729E6E4A800EF4DB7 /* SessionResponse.swift */,
 				37BD8C0929E6E4B800EF4DB7 /* SessionRequest.swift */,
+				37CC07D12B09E6F300538F5F /* WebEventResponse.swift */,
+				37CC07D32B09E93600538F5F /* WebEventPayload.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -273,9 +282,12 @@
 			files = (
 				37CC071A2B079FE100538F5F /* FinBoxWebViewHandler.swift in Sources */,
 				379A3CE629E632AB008990FE /* BankConnect.docc in Sources */,
+				37CC07D42B09E93600538F5F /* WebEventPayload.swift in Sources */,
 				37BD8C1029E6E50100EF4DB7 /* SessionViewModel.swift in Sources */,
 				37BD8C0829E6E4A800EF4DB7 /* SessionResponse.swift in Sources */,
 				37BD8C0A29E6E4B800EF4DB7 /* SessionRequest.swift in Sources */,
+				37CC07D82B09F49B00538F5F /* FinBoxPayload.swift in Sources */,
+				37CC07D22B09E6F300538F5F /* WebEventResponse.swift in Sources */,
 				37BD8C0E29E6E4F000EF4DB7 /* FinBoxWebView.swift in Sources */,
 				37BD8C0C29E6E4DA00EF4DB7 /* UserPreference.swift in Sources */,
 				37BD8C1229E6E52100EF4DB7 /* BankView.swift in Sources */,
