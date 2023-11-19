@@ -11,14 +11,17 @@ struct FinBoxWebView: UIViewRepresentable {
     
     let urlStr: String?
     
+    // Result Function
+    let bankResult : ((FinBoxPayload) -> Void)
+    
     func makeUIView(context: Context) -> WKWebView  {
         // Create a configuration
         let config = WKWebViewConfiguration()
         // Create a user controller
         config.userContentController = WKUserContentController()
         // Set user controller
-        config.userContentController.add(FinBoxWebViewHandler(), name: "BankConnectFlutter")
-
+        config.userContentController.add(FinBoxWebViewHandler(bankResult: self.bankResult), name: "BankConnectFlutter")
+        
         // Create a webview
         let webView = WKWebView(frame: .zero, configuration: config)
         return webView
@@ -36,6 +39,7 @@ struct FinBoxWebView: UIViewRepresentable {
 
 struct FinBoxWebView_Previews: PreviewProvider {
     static var previews: some View {
-        FinBoxWebView(urlStr: "https://bankconnectclient.finbox.in/session_id=f6b166ff-2208-4250-b0e7-2d078d290e21")
+        FinBoxWebView(urlStr: "https://bankconnectclient.finbox.in/session_id=f6b166ff-2208-4250-b0e7-2d078d290e21") { _ in
+        }
     }
 }

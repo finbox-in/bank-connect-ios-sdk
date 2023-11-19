@@ -6,18 +6,22 @@
 import SwiftUI
 
 public struct BankView: View {
-
-    public init() {
-        
-    }
-
+    
+    // Result Function
+    let bankResult : ((FinBoxPayload) -> Void)
+    
     @ObservedObject var viewModel = SessionViewModel()
-
+    
+    init(bankResult: @escaping (FinBoxPayload) -> Void) {
+        self.bankResult = bankResult
+    }
+    
     public var body: some View {
         VStack {
             if (viewModel.sessionUrl != nil) {
                 // Load the webpage
-                FinBoxWebView(urlStr: viewModel.sessionUrl)
+                FinBoxWebView(urlStr: viewModel.sessionUrl,
+                              bankResult: bankResult)
             } else {
                 if #available(iOS 14, *) {
                     // Show progress
@@ -26,7 +30,7 @@ public struct BankView: View {
                     // Progress View is not available
                 }
             }
-
+            
         }.onAppear(perform: {
             // Fetch the session url
             viewModel.fetch()
@@ -40,6 +44,9 @@ struct BankView_Previews: PreviewProvider {
             .linkId(id: UUID().uuidString)
             .apiKey(key: "I9G9Js79et7ykyLCnFp279XxsJH85Jpu3d5E2Log")
             .build();
-        BankView()
+        BankView() {
+            payload in
+            debugPrint("Result entity Id", payload.entityId ?? "Entity Id empty")
+        }
     }
 }

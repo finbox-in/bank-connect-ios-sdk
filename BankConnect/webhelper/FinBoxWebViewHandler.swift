@@ -11,6 +11,13 @@ import WebKit
 
 class FinBoxWebViewHandler: NSObject, WKScriptMessageHandler {
     
+    // Result Function
+    let bankResult : ((FinBoxPayload) -> Void)
+    
+    init(bankResult: @escaping (FinBoxPayload) -> Void) {
+        self.bankResult = bankResult
+    }
+
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         do {
             // Parse the message body received from webview
@@ -27,6 +34,7 @@ class FinBoxWebViewHandler: NSObject, WKScriptMessageHandler {
         let eventResponse = try JSONDecoder().decode(WebEventResponse.self, from: jsonData)
         
         debugPrint("Event Response Decode", eventResponse)
+        debugPrint("Event Response Status", eventResponse.status)
         
         if (eventResponse.status == "error") {
             // Update the callback with error reason
@@ -42,7 +50,9 @@ class FinBoxWebViewHandler: NSObject, WKScriptMessageHandler {
         // Generate the callback payload
         let payload = FinBoxPayload(message: message, linkId: eventResponse?.payload.linkId, entityId: eventResponse?.payload.entityId, error_type: eventResponse?.payload.error_type)
         debugPrint("Callback Entity Id", payload.entityId ?? "Empty Entity Id")
-        
+
+        // Send callback to the View
+        self.bankResult(payload)
     }
     
 }
