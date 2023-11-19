@@ -8,11 +8,11 @@ import SwiftUI
 public struct BankView: View {
     
     // Result Function
-    let bankResult : ((FinBoxPayload) -> Void)
+    public let bankResult : ((FinBoxPayload) -> Void)
     
     @ObservedObject var viewModel = SessionViewModel()
     
-    init(bankResult: @escaping (FinBoxPayload) -> Void) {
+    public init(bankResult: @escaping (FinBoxPayload) -> Void) {
         self.bankResult = bankResult
     }
     
