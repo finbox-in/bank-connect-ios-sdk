@@ -30,18 +30,28 @@ class FinBoxWebViewHandler: NSObject, WKScriptMessageHandler {
     
     // Parse the message body from the webview event
     func parseMessageBody(message: Any) throws {
+        // Serialize the message data
         let jsonData = try JSONSerialization.data(withJSONObject: message)
+        // Convert the web response event to struct
         let eventResponse = try JSONDecoder().decode(WebEventResponse.self, from: jsonData)
         
-        debugPrint("Event Response Decode", eventResponse)
-        debugPrint("Event Response Status", eventResponse.status)
-        
-        if (eventResponse.status == "error") {
-            // Update the callback with error reason
-            setCallbackPayload(message: eventResponse.payload.reason, eventResponse: eventResponse)
-        } else {
+        if (eventResponse.status == "exit") {
             // Update the callback with payload message
             setCallbackPayload(message: eventResponse.payload.message, eventResponse: eventResponse)
+        } else if (eventResponse.status == "success") {
+            // Update the callback with payload message
+            setCallbackPayload(message: eventResponse.payload.message, eventResponse: eventResponse)
+        } else if (eventResponse.status == "error") {
+            // Callback received for an error reason
+            debugPrint("Error Reason", eventResponse.payload.reason ?? "Failed to receive Reason")
+            debugPrint("Error Type", eventResponse.payload.error_type ?? "Failed to receive Error Type")
+//            setCallbackPayload(message: eventResponse.payload.reason, eventResponse: eventResponse)
+        } else if (eventResponse.status == "info") {
+            // Callback received about generic events
+            debugPrint("Info Name", eventResponse.payload.event_name ?? "Failed to receive Event Name")
+            debugPrint("Info Message", eventResponse.payload.message ?? "Failed to receive Message")
+        } else {
+            debugPrint("Event Callback Status", eventResponse.status)
         }
     }
     
