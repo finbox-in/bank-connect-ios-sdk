@@ -13,24 +13,30 @@ class FinBoxWebViewHandler: NSObject, WKScriptMessageHandler {
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         debugPrint("Event Repsonse", message.body)
-        guard let bodyString = message.body as? String,
-              let bodyData = bodyString.data(using: .utf8) else {
-            debugPrint("Event Response is empty")
-            return
+        do {
+            // Parse the message body received from webview
+            try parseMessageBody(message: message.body)
+        } catch {
+            print("Json Decode Error")
         }
 
-        let eventResponse = try? JSONDecoder().decode(WebEventResponse.self, from: bodyData)
-        debugPrint("Entity Id", eventResponse?.payload.entityId ?? "Empty Entity Id")
+    }
+    
+    // Parse the message body from the webview event
+    func parseMessageBody(message: Any) throws {
+        let jsonData = try JSONSerialization.data(withJSONObject: message)
+        let eventResponse = try JSONDecoder().decode(WebEventResponse.self, from: jsonData)
         
+        debugPrint("Event Response Decode", eventResponse)
+        debugPrint("Entity Id", eventResponse.payload.entityId ?? "Empty Entity Id")
         
-        if (eventResponse?.status == "error") {
+        if (eventResponse.status == "error") {
             // Update the callback with error reason
-            setCallbackPayload(message: eventResponse?.payload.reason, eventResponse: eventResponse)
+            setCallbackPayload(message: eventResponse.payload.reason, eventResponse: eventResponse)
         } else {
             // Update the callback with payload message
-            setCallbackPayload(message: eventResponse?.payload.message, eventResponse: eventResponse)
+            setCallbackPayload(message: eventResponse.payload.message, eventResponse: eventResponse)
         }
-        
     }
     
     // Update the callback payload
@@ -38,7 +44,7 @@ class FinBoxWebViewHandler: NSObject, WKScriptMessageHandler {
         // Generate the callback payload
         let payload = FinBoxPayload(message: message, linkId: eventResponse?.payload.linkId, entityId: eventResponse?.payload.entityId, error_type: eventResponse?.payload.error_type)
         debugPrint("Callback Entity Id", payload.entityId ?? "Empty Entity Id")
-
+        
     }
     
 }

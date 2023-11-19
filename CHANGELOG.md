@@ -1,13 +1,8 @@
 #  CHANGELOG
 
-## 0.1.5
+## 0.1.6
 
-Capture event response from Web
-
-
-## 0.1.4
-
-Add Webview configutation
+Capture event response from Webview
 
 
 ## 0.1.3
