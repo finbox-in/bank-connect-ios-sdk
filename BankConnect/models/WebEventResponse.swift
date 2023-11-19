@@ -13,7 +13,7 @@ struct WebEventResponse: Codable {
     let status: String
     
     // Message of the event response
-    let message: String
+    let message: String?
     
     // Event Payload
     let payload: WebEventPayload
