@@ -12,7 +12,6 @@ import WebKit
 class FinBoxWebViewHandler: NSObject, WKScriptMessageHandler {
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        debugPrint("Event Repsonse", message.body)
         do {
             // Parse the message body received from webview
             try parseMessageBody(message: message.body)
@@ -28,7 +27,6 @@ class FinBoxWebViewHandler: NSObject, WKScriptMessageHandler {
         let eventResponse = try JSONDecoder().decode(WebEventResponse.self, from: jsonData)
         
         debugPrint("Event Response Decode", eventResponse)
-        debugPrint("Entity Id", eventResponse.payload.entityId ?? "Empty Entity Id")
         
         if (eventResponse.status == "error") {
             // Update the callback with error reason
