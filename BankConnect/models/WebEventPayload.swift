@@ -21,5 +21,11 @@ struct WebEventPayload: Codable {
     // Entity id for the successful session
     let entityId: String
     
+    // Reason for error cases
+    let reason: String
+    
+    // Error cases
+    let error_type: String
+    
 }
 
