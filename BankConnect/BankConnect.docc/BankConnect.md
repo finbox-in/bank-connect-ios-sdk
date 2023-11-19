@@ -30,5 +30,9 @@ let _ = FinBoxBankConnect.Builder()
 Show the Bank Screen
 
 ```
-BankView()
+BankView() {
+    payload in
+    // Success Response - Valid Entity Id
+    debugPrint("Entity Id", payload.entityId)
+}
 ```
