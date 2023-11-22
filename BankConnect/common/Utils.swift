@@ -13,8 +13,13 @@ struct Utils {
     }
     
     // Pass a url to the function and get the POST URL Request
-    static func postRequest(urlStr: String, body: Data) -> URLRequest {
-        var urlRequest = URLRequest(url: URL(string: urlStr)!)
+    static func postRequest(urlStr: String, body: Data) -> URLRequest? {
+        guard let url = URL(string: urlStr) else {
+            debugPrint("Convert to URL object is null")
+            return nil
+        }
+        
+        var urlRequest = URLRequest(url: url)
         
         // Add JSON Header
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")

@@ -22,7 +22,16 @@ class SessionViewModel: ObservableObject {
             return
         }
         
-        let task = URLSession.shared.dataTask(with: Utils.postRequest(urlStr: urlStr, body: sessionBody)) { data, response, error in
+        // Make the api call
+        
+        let requestParams = Utils.postRequest(urlStr: urlStr, body: sessionBody)
+        
+        guard let requestParams = requestParams else {
+            debugPrint("Request Params null")
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: requestParams) { data, response, error in
             if let error = error {
                 self.handleClientError(error: error)
                 return
