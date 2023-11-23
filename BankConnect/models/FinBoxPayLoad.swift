@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct FinBoxPayload {
+public struct FinBoxPayload: Codable {
     
     // Additional Message
     public let message: String?

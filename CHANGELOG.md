@@ -1,5 +1,10 @@
 #  CHANGELOG
 
+## 0.2.1
+
+Make Callback Payload Codable
+
+
 ## 0.2.0
 
 Return Callbacks when success and exit events are triggered
