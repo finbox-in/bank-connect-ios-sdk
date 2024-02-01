@@ -1,0 +1,11 @@
+framework module BankConnect {
+  umbrella header "BankConnect.h"
+  export *
+
+  module * { export * }
+}
+
+module BankConnect.Swift {
+  header "BankConnect-Swift.h"
+  requires objc
+}
