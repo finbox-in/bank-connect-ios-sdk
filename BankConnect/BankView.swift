@@ -34,7 +34,6 @@ public struct BankView: View {
                         // Load the webpage
                         FinBoxWebView(urlStr: viewModel.sessionResult?.sessionURL,
                                       bankResult: bankResult)
-                        let _ = debugPrint("BankView: Loading WebView")
                     } else {
                         handleError(error: "Invalid Session Url")
                     }
