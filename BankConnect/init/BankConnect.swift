@@ -7,7 +7,7 @@
 
 import Foundation
 
-// BankConnect SDK Initializer
+/// BankConnect SDK Initializer
 public class BankConnect {
     
     private init(key: String, id: String, start: String?, end: String?, name: String?, mode: JourneyMode) {
@@ -15,6 +15,7 @@ public class BankConnect {
     }
     
     
+    /// The `BankConnect.Builder` is responsible for constructing initialisation of the BankConnect SDK
     public class Builder {
         
         public init() {}
@@ -26,36 +27,56 @@ public class BankConnect {
         private var bankName: String?
         private var journeyMode: JourneyMode = JourneyMode.NORMAL
         
+        /// Set API Key
+        /// - Parameter key: Client API Key
+        /// - Returns - Instance of `BankConnect.Builder`
         public func apiKey(_ key: String) -> Builder {
             self.key = key
             return self
         }
 
+        /// Set Link Id
+        /// - Parameter id: Unique user id
+        /// - Returns Instance of `BankConnect.Builder`
         public func linkId(_ id: String) -> Builder {
             self.id = id
             return self
         }
         
+        /// Set Start Date
+        /// - Parameter start: Start Date of the form dd/MM/yyyy
+        /// - Returns Instance of `BankConnect.Builder`
         public func fromDate(_ start: String) -> Builder {
             self.startDate = start
             return self
         }
         
+        /// Set End Date
+        /// - Parameter end: End Date of the form dd/MM/yyyy
+        /// - Returns Instance of `BankConnect.Builder`
         public func toDate(_ end: String) -> Builder {
             self.endDate = end
             return self
         }
         
+        /// Set Bank Name
+        /// - Parameter name: Short name of the Bank
+        /// - Returns Instance of `BankConnect.Builder`
         public func bank(_ name: String) -> Builder {
             self.bankName = name
             return self
         }
         
+        /// Set Journey Mode
+        /// - Parameter mode: Mode of the user journey
+        /// - Returns Instance of `BankConnect.Builder`
         public func journeyMode(_ mode: JourneyMode) -> Builder {
             self.journeyMode = mode
             return self
         }
 
+        /// Create an instance of Builder
+        /// - Returns Instance of `BankConnect.Builder` with passed parameters
         public func build() -> BankConnect {
             guard let key = self.key else {
                 fatalError("API Key cannot be null")
