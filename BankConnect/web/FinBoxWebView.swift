@@ -36,9 +36,3 @@ struct FinBoxWebView: UIViewRepresentable {
     
 }
 
-struct FinBoxWebView_Previews: PreviewProvider {
-    static var previews: some View {
-        FinBoxWebView(urlStr: "Bank_Connect_Session_URL") { _ in
-        }
-    }
-}
