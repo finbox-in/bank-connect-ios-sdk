@@ -51,7 +51,8 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.authors             = { "Srikar Reddy" => "srikar@finbox.in" }
+  spec.authors             = { "Srikar Reddy" => "srikar@finbox.in",
+                                "Ashutosh Jena" => "ashutosh.jena@finbox.in" }
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
