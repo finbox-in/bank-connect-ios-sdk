@@ -26,32 +26,32 @@ public class BankConnect {
         private var bankName: String?
         private var journeyMode: JourneyMode = JourneyMode.NORMAL
         
-        public func apiKey(key: String) -> Builder {
+        public func apiKey(_ key: String) -> Builder {
             self.key = key
             return self
         }
 
-        public func linkId(id: String) -> Builder {
+        public func linkId(_ id: String) -> Builder {
             self.id = id
             return self
         }
         
-        public func fromDate(start: String) -> Builder {
+        public func fromDate(_ start: String) -> Builder {
             self.startDate = start
             return self
         }
         
-        public func toDate(end: String) -> Builder {
+        public func toDate(_ end: String) -> Builder {
             self.endDate = end
             return self
         }
         
-        public func bank(name: String) -> Builder {
+        public func bank(_ name: String) -> Builder {
             self.bankName = name
             return self
         }
         
-        public func journeyMode(mode: JourneyMode) -> Builder {
+        public func journeyMode(_ mode: JourneyMode) -> Builder {
             self.journeyMode = mode
             return self
         }
