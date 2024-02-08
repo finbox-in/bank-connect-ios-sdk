@@ -36,6 +36,7 @@
 		6DA049CF2B6BDE8000DC2401 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 6DA049CE2B6BDE8000DC2401 /* CHANGELOG.md */; };
 		6DA049D12B6BDE8A00DC2401 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6DA049D02B6BDE8A00DC2401 /* LICENSE */; };
 		6DA049D32B6BDE9600DC2401 /* BankConnect.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6DA049D22B6BDE9600DC2401 /* BankConnect.podspec */; };
+		6DA049D52B6CC92F00DC2401 /* SessionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA049D42B6CC92F00DC2401 /* SessionResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		6DA049CE2B6BDE8000DC2401 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		6DA049D02B6BDE8A00DC2401 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6DA049D22B6BDE9600DC2401 /* BankConnect.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BankConnect.podspec; sourceTree = "<group>"; };
+		6DA049D42B6CC92F00DC2401 /* SessionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +213,7 @@
 				6DA0499D2B6BD8A300DC2401 /* SessionRequest.swift */,
 				6DA0499F2B6BD8BA00DC2401 /* WebEventResponse.swift */,
 				6DA049A12B6BD8D500DC2401 /* WebEventPayload.swift */,
+				6DA049D42B6CC92F00DC2401 /* SessionResult.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				6DA0498E2B6BD5EB00DC2401 /* BankView.swift in Sources */,
 				6DA049B02B6BD9A900DC2401 /* SessionViewModel.swift in Sources */,
 				6DA049A02B6BD8BA00DC2401 /* WebEventResponse.swift in Sources */,
+				6DA049D52B6CC92F00DC2401 /* SessionResult.swift in Sources */,
 				6DA049942B6BD67500DC2401 /* JourneyMode.swift in Sources */,
 				379A3CE629E632AB008990FE /* BankConnect.docc in Sources */,
 				6DA049A72B6BD90D00DC2401 /* NetworkUtils.swift in Sources */,
