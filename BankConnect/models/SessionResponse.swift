@@ -1,14 +1,19 @@
 //
-//  Response model for the session API
+//  SessionResponse.swift
+//  BankConnect
 //
+//  Created by Srikar on 19/11/23.
 //
+
 
 import Foundation
 
-
+/// Response object for session url
 struct SessionResponse: Hashable, Codable {
-
-    // Redirect web url
-    let redirect_url: String
-
+    let redirectUrl: String
+    
+    enum CodingKeys: String, CodingKey {
+        case redirectUrl = "redirect_url"
+    }
 }
+

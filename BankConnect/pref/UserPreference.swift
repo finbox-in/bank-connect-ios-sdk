@@ -1,120 +1,110 @@
 //
-//  File stores the user preferences
+//  UserPref.swift
+//  BankConnect
 //
+//  Created by Ashutosh Jena on 12/12/23.
 //
 
 import Foundation
 import Combine
 
 
-
+/// UserDefaults Class for storing basic user details
 class UserPreference {
-
-    struct Static {
-        // Key contains the API Key
-        static var FINBOX_BANK_CONNECT_API_KEY = "finbox-bank-connect-api-key"
-        // Key contains the Link Id
-        static var FINBOX_BANK_CONNECT_LINK_ID = "finbox-bank-connect-link-id"
-        
-        // Key contains the From date
-        static var FINBOX_BANK_CONNECT_FROM_DATE = "finbox-bank-connect-from-date"
-        
-        // Key contains the To date
-        static var FINBOX_BANK_CONNECT_TO_DATE = "finbox-bank-connect-to-date"
-        
-        // Key contains the Bank Name
-        static var FINBOX_BANK_CONNECT_BANK_NAME = "finbox-bank-connect-bank-name"
-        
-        // Key contains the Redirect Url
-        static var FINBOX_BANK_CONNECT_REDIRECT_URL = "finbox-bank-connect-redirect-url"
-        
-        // Key contains the Logo Url
-        static var FINBOX_BANK_CONNECT_LOGO_URL = "finbox-bank-connect-logo-url"
-        
-        // Key contains the Mode
-        static var FINBOX_BANK_CONNECT_MODE = "finbox-bank-connect-mode"
-    }
-
+    
     // Instance of user defaults
     private let userDefaults = UserDefaults.standard
     
     // API Key
     var apiKey: String? {
         get {
-            return userDefaults.object(forKey: Static.FINBOX_BANK_CONNECT_API_KEY) as? String ?? nil
+            return userDefaults.object(forKey: FINBOX_BANK_CONNECT_API_KEY) as? String ?? nil
         }
         set {
-            userDefaults.set(newValue, forKey: Static.FINBOX_BANK_CONNECT_API_KEY)
+            userDefaults.set(newValue, forKey: FINBOX_BANK_CONNECT_API_KEY)
         }
     }
-
+    
     // Link Id
     var linkId: String? {
         get {
-            return userDefaults.object(forKey: Static.FINBOX_BANK_CONNECT_LINK_ID) as? String ?? nil
+            return userDefaults.object(forKey: FINBOX_BANK_CONNECT_LINK_ID) as? String ?? nil
         }
         set {
-            userDefaults.set(newValue, forKey: Static.FINBOX_BANK_CONNECT_LINK_ID)
+            userDefaults.set(newValue, forKey: FINBOX_BANK_CONNECT_LINK_ID)
         }
     }
     
     // From Date
     var fromDate: String? {
         get {
-            return userDefaults.object(forKey: Static.FINBOX_BANK_CONNECT_FROM_DATE) as? String ?? nil
+            return userDefaults.object(forKey: FINBOX_BANK_CONNECT_FROM_DATE) as? String ?? nil
         }
         set {
-            userDefaults.set(newValue, forKey: Static.FINBOX_BANK_CONNECT_FROM_DATE)
+            userDefaults.set(newValue, forKey: FINBOX_BANK_CONNECT_FROM_DATE)
         }
     }
     
     // To Date
     var toDate: String? {
         get {
-            return userDefaults.object(forKey: Static.FINBOX_BANK_CONNECT_TO_DATE) as? String ?? nil
+            return userDefaults.object(forKey: FINBOX_BANK_CONNECT_TO_DATE) as? String ?? nil
         }
         set {
-            userDefaults.set(newValue, forKey: Static.FINBOX_BANK_CONNECT_TO_DATE)
+            userDefaults.set(newValue, forKey: FINBOX_BANK_CONNECT_TO_DATE)
         }
     }
     
     // Bank Name
     var bankName: String? {
         get {
-            return userDefaults.object(forKey: Static.FINBOX_BANK_CONNECT_BANK_NAME) as? String ?? nil
+            return userDefaults.object(forKey: FINBOX_BANK_CONNECT_BANK_NAME) as? String ?? nil
         }
         set {
-            userDefaults.set(newValue, forKey: Static.FINBOX_BANK_CONNECT_BANK_NAME)
+            userDefaults.set(newValue, forKey: FINBOX_BANK_CONNECT_BANK_NAME)
         }
     }
     
     // Redirect Url
     var redirectUrl: String? {
         get {
-            return userDefaults.object(forKey: Static.FINBOX_BANK_CONNECT_REDIRECT_URL) as? String ?? nil
+            return userDefaults.object(forKey: FINBOX_BANK_CONNECT_REDIRECT_URL) as? String ?? nil
         }
         set {
-            userDefaults.set(newValue, forKey: Static.FINBOX_BANK_CONNECT_REDIRECT_URL)
+            userDefaults.set(newValue, forKey: FINBOX_BANK_CONNECT_REDIRECT_URL)
         }
     }
     
-    // Redirect Url
+    // Logo Url
     var logoUrl: String? {
         get {
-            return userDefaults.object(forKey: Static.FINBOX_BANK_CONNECT_LOGO_URL) as? String ?? nil
+            return userDefaults.object(forKey: FINBOX_BANK_CONNECT_LOGO_URL) as? String ?? nil
         }
         set {
-            userDefaults.set(newValue, forKey: Static.FINBOX_BANK_CONNECT_LOGO_URL)
+            userDefaults.set(newValue, forKey: FINBOX_BANK_CONNECT_LOGO_URL)
         }
     }
     
     // Mode
-    var mode: String? {
+    var journeyMode: JourneyMode? {
         get {
-            return userDefaults.object(forKey: Static.FINBOX_BANK_CONNECT_MODE) as? String ?? nil
+            guard let mode = userDefaults.object(forKey: FINBOX_BANK_CONNECT_MODE) as? String ?? nil else {
+                return nil
+            }
+            return JourneyMode(rawValue: mode)
         }
         set {
-            userDefaults.set(newValue, forKey: Static.FINBOX_BANK_CONNECT_MODE)
+            userDefaults.set(newValue?.rawValue, forKey: FINBOX_BANK_CONNECT_MODE)
+        }
+    }
+    
+    // Token
+    var userToken: String? {
+        get {
+            return userDefaults.object(forKey: FINBOX_BANK_CONNECT_USER_TOKEN) as? String ?? nil
+        }
+        set {
+            userDefaults.set(newValue, forKey: FINBOX_BANK_CONNECT_USER_TOKEN)
         }
     }
 }

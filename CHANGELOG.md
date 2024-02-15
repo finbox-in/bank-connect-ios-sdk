@@ -1,5 +1,10 @@
 #  CHANGELOG
 
+
+## 0.3.0
+
+Add Multi Bank Session Flow
+
 ## 0.2.1
 
 Make Callback Payload Codable

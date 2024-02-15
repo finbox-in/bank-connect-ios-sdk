@@ -7,25 +7,22 @@
 
 import Foundation
 
+/// Object in WebEvent
 struct WebEventPayload: Codable {
-    
-    // Name of the event
-    let event_name: String?
-    
-    // Additional Message
+    let eventName: String?
     let message: String?
-    
-    // Link Id for the session
     let linkId: String
-    
-    // Entity id for the successful session
     let entityId: String?
-    
-    // Reason for error cases
     let reason: String?
+    let errorType: String?
     
-    // Error cases
-    let error_type: String?
-    
+    enum CodingKeys: String, CodingKey {
+        case eventName = "event_name"
+        case message
+        case linkId
+        case entityId
+        case reason
+        case errorType = "error_type"
+    }
 }
 

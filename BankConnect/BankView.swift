@@ -1,8 +1,13 @@
 //
-//  Entry point for the Bank View
+//  BankView.swift
+//  BankConnect
 //
+//  Entry point for the SDK
+//
+//  Created by Ashutosh Jena on 12/12/23.
 //
 
+import Foundation
 import SwiftUI
 
 public struct BankView: View {
@@ -17,36 +22,33 @@ public struct BankView: View {
     }
     
     public var body: some View {
-        VStack {
-            if (viewModel.sessionUrl != nil) {
-                // Load the webpage
-                FinBoxWebView(urlStr: viewModel.sessionUrl,
-                              bankResult: bankResult)
-            } else {
-                if #available(iOS 14, *) {
-                    // Show progress
-                    ProgressView()
+        if viewModel.sessionFetched {
+            VStack {
+                if viewModel.sessionResult?.error == nil {
+                    if viewModel.sessionResult?.sessionURL != nil {
+                        FinBoxWebView(urlStr: viewModel.sessionResult?.sessionURL, bankResult: bankResult)
+                    } else {
+                        handleError(error: "Invalid session url")
+                    }
                 } else {
-                    // Progress View is not available
+                    handleError(error: viewModel.sessionResult?.error ?? "Unknown Error")
                 }
+            }.onAppear() {
+                debugPrint("Session Fetched", viewModel.sessionFetched)
             }
-            
-        }.onAppear(perform: {
-            // Fetch the session url
-            viewModel.fetch()
-        })
+        } else {
+            VStack {
+                ProgressView()
+            }.onAppear() {
+                debugPrint("Fetching Session")
+                viewModel.fetchSession()
+            }
+        }
+    }
+    
+    func handleError(error: String) -> some View {
+        bankResult(FinBoxPayload(message: error, linkId: "", entityId: "", errorType: ""))
+        return Text("\(String(describing: error))")
     }
 }
 
-struct BankView_Previews: PreviewProvider {
-    static var previews: some View {
-        let _ = FinBoxBankConnect.Builder()
-            .linkId(id: UUID().uuidString)
-            .apiKey(key: "I9G9Js79et7ykyLCnFp279XxsJH85Jpu3d5E2Log")
-            .build();
-        BankView() {
-            payload in
-            debugPrint("Result entity Id", payload.entityId ?? "Entity Id empty")
-        }
-    }
-}

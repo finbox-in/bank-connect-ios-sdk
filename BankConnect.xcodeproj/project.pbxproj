@@ -7,24 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3725F45429E700E80042189F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 3725F45329E700E80042189F /* LICENSE */; };
 		379A3CE629E632AB008990FE /* BankConnect.docc in Sources */ = {isa = PBXBuildFile; fileRef = 379A3CE529E632AB008990FE /* BankConnect.docc */; };
 		379A3CEC29E632AC008990FE /* BankConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379A3CE129E632AB008990FE /* BankConnect.framework */; };
 		379A3CF129E632AC008990FE /* BankConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379A3CF029E632AC008990FE /* BankConnectTests.swift */; };
 		379A3CF229E632AC008990FE /* BankConnect.h in Headers */ = {isa = PBXBuildFile; fileRef = 379A3CE429E632AB008990FE /* BankConnect.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		37BD8C0429E6E41800EF4DB7 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BD8C0329E6E41800EF4DB7 /* Utils.swift */; };
-		37BD8C0629E6E47100EF4DB7 /* FinBoxBankConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BD8C0529E6E47100EF4DB7 /* FinBoxBankConnect.swift */; };
-		37BD8C0829E6E4A800EF4DB7 /* SessionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BD8C0729E6E4A800EF4DB7 /* SessionResponse.swift */; };
-		37BD8C0A29E6E4B800EF4DB7 /* SessionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BD8C0929E6E4B800EF4DB7 /* SessionRequest.swift */; };
-		37BD8C0C29E6E4DA00EF4DB7 /* UserPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BD8C0B29E6E4DA00EF4DB7 /* UserPreference.swift */; };
-		37BD8C0E29E6E4F000EF4DB7 /* FinBoxWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BD8C0D29E6E4F000EF4DB7 /* FinBoxWebView.swift */; };
-		37BD8C1029E6E50100EF4DB7 /* SessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BD8C0F29E6E50100EF4DB7 /* SessionViewModel.swift */; };
-		37BD8C1229E6E52100EF4DB7 /* BankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BD8C1129E6E52100EF4DB7 /* BankView.swift */; };
-		37BD8C1829E6EA1A00EF4DB7 /* BankConnect.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 37BD8C1729E6EA1A00EF4DB7 /* BankConnect.podspec */; };
-		37CC071A2B079FE100538F5F /* FinBoxWebViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC07192B079FE100538F5F /* FinBoxWebViewHandler.swift */; };
-		37CC07D22B09E6F300538F5F /* WebEventResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC07D12B09E6F300538F5F /* WebEventResponse.swift */; };
-		37CC07D42B09E93600538F5F /* WebEventPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC07D32B09E93600538F5F /* WebEventPayload.swift */; };
-		37CC07D82B09F49B00538F5F /* FinBoxPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC07D72B09F49B00538F5F /* FinBoxPayload.swift */; };
+		6DA0498E2B6BD5EB00DC2401 /* BankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA0498D2B6BD5EB00DC2401 /* BankView.swift */; };
+		6DA049912B6BD60E00DC2401 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA049902B6BD60E00DC2401 /* Constants.swift */; };
+		6DA049942B6BD67500DC2401 /* JourneyMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA049932B6BD67500DC2401 /* JourneyMode.swift */; };
+		6DA049972B6BD69300DC2401 /* BankConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA049962B6BD69300DC2401 /* BankConnect.swift */; };
+		6DA0499A2B6BD6D000DC2401 /* FinBoxPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA049992B6BD6D000DC2401 /* FinBoxPayload.swift */; };
+		6DA0499C2B6BD88600DC2401 /* SessionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA0499B2B6BD88600DC2401 /* SessionResponse.swift */; };
+		6DA0499E2B6BD8A300DC2401 /* SessionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA0499D2B6BD8A300DC2401 /* SessionRequest.swift */; };
+		6DA049A02B6BD8BA00DC2401 /* WebEventResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA0499F2B6BD8BA00DC2401 /* WebEventResponse.swift */; };
+		6DA049A22B6BD8D500DC2401 /* WebEventPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA049A12B6BD8D500DC2401 /* WebEventPayload.swift */; };
+		6DA049A52B6BD8FC00DC2401 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA049A42B6BD8FC00DC2401 /* APIService.swift */; };
+		6DA049A72B6BD90D00DC2401 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA049A62B6BD90D00DC2401 /* NetworkUtils.swift */; };
+		6DA049AA2B6BD93200DC2401 /* UserPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA049A92B6BD93200DC2401 /* UserPreference.swift */; };
+		6DA049AD2B6BD98500DC2401 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA049AC2B6BD98500DC2401 /* DateUtil.swift */; };
+		6DA049B02B6BD9A900DC2401 /* SessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA049AF2B6BD9A900DC2401 /* SessionViewModel.swift */; };
+		6DA049B32B6BD9C300DC2401 /* FinBoxWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA049B22B6BD9C300DC2401 /* FinBoxWebView.swift */; };
+		6DA049B52B6BD9EB00DC2401 /* FinBoxWebViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA049B42B6BD9EB00DC2401 /* FinBoxWebViewHandler.swift */; };
+		6DA049BD2B6BDA3000DC2401 /* BankConnectSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA049BC2B6BDA3000DC2401 /* BankConnectSampleApp.swift */; };
+		6DA049BF2B6BDA3000DC2401 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA049BE2B6BDA3000DC2401 /* ContentView.swift */; };
+		6DA049C12B6BDA3100DC2401 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DA049C02B6BDA3100DC2401 /* Assets.xcassets */; };
+		6DA049C42B6BDA3100DC2401 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DA049C32B6BDA3100DC2401 /* Preview Assets.xcassets */; };
+		6DA049C92B6BDA5900DC2401 /* BankConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379A3CE129E632AB008990FE /* BankConnect.framework */; };
+		6DA049CA2B6BDA5900DC2401 /* BankConnect.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 379A3CE129E632AB008990FE /* BankConnect.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DA049CF2B6BDE8000DC2401 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 6DA049CE2B6BDE8000DC2401 /* CHANGELOG.md */; };
+		6DA049D12B6BDE8A00DC2401 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6DA049D02B6BDE8A00DC2401 /* LICENSE */; };
+		6DA049D32B6BDE9600DC2401 /* BankConnect.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6DA049D22B6BDE9600DC2401 /* BankConnect.podspec */; };
+		6DA049D52B6CC92F00DC2401 /* SessionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA049D42B6CC92F00DC2401 /* SessionResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,29 +47,60 @@
 			remoteGlobalIDString = 379A3CE029E632AB008990FE;
 			remoteInfo = BankConnect;
 		};
+		6DA049CB2B6BDA5900DC2401 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 379A3CD829E632AB008990FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 379A3CE029E632AB008990FE;
+			remoteInfo = BankConnect;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6DA049CD2B6BDA5900DC2401 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6DA049CA2B6BDA5900DC2401 /* BankConnect.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		3725F45329E700E80042189F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		3799D2B129EFC4090077FEED /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		379A3CE129E632AB008990FE /* BankConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BankConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		379A3CE429E632AB008990FE /* BankConnect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BankConnect.h; sourceTree = "<group>"; };
 		379A3CE529E632AB008990FE /* BankConnect.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = BankConnect.docc; sourceTree = "<group>"; };
 		379A3CEB29E632AC008990FE /* BankConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankConnectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		379A3CF029E632AC008990FE /* BankConnectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankConnectTests.swift; sourceTree = "<group>"; };
-		37BD8C0329E6E41800EF4DB7 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		37BD8C0529E6E47100EF4DB7 /* FinBoxBankConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinBoxBankConnect.swift; sourceTree = "<group>"; };
-		37BD8C0729E6E4A800EF4DB7 /* SessionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionResponse.swift; sourceTree = "<group>"; };
-		37BD8C0929E6E4B800EF4DB7 /* SessionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRequest.swift; sourceTree = "<group>"; };
-		37BD8C0B29E6E4DA00EF4DB7 /* UserPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreference.swift; sourceTree = "<group>"; };
-		37BD8C0D29E6E4F000EF4DB7 /* FinBoxWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinBoxWebView.swift; sourceTree = "<group>"; };
-		37BD8C0F29E6E50100EF4DB7 /* SessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewModel.swift; sourceTree = "<group>"; };
-		37BD8C1129E6E52100EF4DB7 /* BankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankView.swift; sourceTree = "<group>"; };
-		37BD8C1729E6EA1A00EF4DB7 /* BankConnect.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = BankConnect.podspec; sourceTree = "<group>"; };
-		37CC07192B079FE100538F5F /* FinBoxWebViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinBoxWebViewHandler.swift; sourceTree = "<group>"; };
-		37CC07D12B09E6F300538F5F /* WebEventResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebEventResponse.swift; sourceTree = "<group>"; };
-		37CC07D32B09E93600538F5F /* WebEventPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebEventPayload.swift; sourceTree = "<group>"; };
-		37CC07D72B09F49B00538F5F /* FinBoxPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinBoxPayload.swift; sourceTree = "<group>"; };
+		6DA0498D2B6BD5EB00DC2401 /* BankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankView.swift; sourceTree = "<group>"; };
+		6DA049902B6BD60E00DC2401 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6DA049932B6BD67500DC2401 /* JourneyMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyMode.swift; sourceTree = "<group>"; };
+		6DA049962B6BD69300DC2401 /* BankConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankConnect.swift; sourceTree = "<group>"; };
+		6DA049992B6BD6D000DC2401 /* FinBoxPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinBoxPayload.swift; sourceTree = "<group>"; };
+		6DA0499B2B6BD88600DC2401 /* SessionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionResponse.swift; sourceTree = "<group>"; };
+		6DA0499D2B6BD8A300DC2401 /* SessionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRequest.swift; sourceTree = "<group>"; };
+		6DA0499F2B6BD8BA00DC2401 /* WebEventResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebEventResponse.swift; sourceTree = "<group>"; };
+		6DA049A12B6BD8D500DC2401 /* WebEventPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebEventPayload.swift; sourceTree = "<group>"; };
+		6DA049A42B6BD8FC00DC2401 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		6DA049A62B6BD90D00DC2401 /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
+		6DA049A92B6BD93200DC2401 /* UserPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreference.swift; sourceTree = "<group>"; };
+		6DA049AC2B6BD98500DC2401 /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
+		6DA049AF2B6BD9A900DC2401 /* SessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewModel.swift; sourceTree = "<group>"; };
+		6DA049B22B6BD9C300DC2401 /* FinBoxWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinBoxWebView.swift; sourceTree = "<group>"; };
+		6DA049B42B6BD9EB00DC2401 /* FinBoxWebViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinBoxWebViewHandler.swift; sourceTree = "<group>"; };
+		6DA049BA2B6BDA3000DC2401 /* BankConnectSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankConnectSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DA049BC2B6BDA3000DC2401 /* BankConnectSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankConnectSampleApp.swift; sourceTree = "<group>"; };
+		6DA049BE2B6BDA3000DC2401 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6DA049C02B6BDA3100DC2401 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6DA049C32B6BDA3100DC2401 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6DA049CE2B6BDE8000DC2401 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		6DA049D02B6BDE8A00DC2401 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		6DA049D22B6BDE9600DC2401 /* BankConnect.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BankConnect.podspec; sourceTree = "<group>"; };
+		6DA049D42B6CC92F00DC2401 /* SessionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,18 +119,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6DA049B72B6BDA3000DC2401 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DA049C92B6BDA5900DC2401 /* BankConnect.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		379A3CD729E632AB008990FE = {
 			isa = PBXGroup;
 			children = (
-				3799D2B129EFC4090077FEED /* CHANGELOG.md */,
-				3725F45329E700E80042189F /* LICENSE */,
-				37BD8C1729E6EA1A00EF4DB7 /* BankConnect.podspec */,
+				6DA049D02B6BDE8A00DC2401 /* LICENSE */,
+				6DA049D22B6BDE9600DC2401 /* BankConnect.podspec */,
+				6DA049CE2B6BDE8000DC2401 /* CHANGELOG.md */,
 				379A3CE329E632AB008990FE /* BankConnect */,
 				379A3CEF29E632AC008990FE /* BankConnectTests */,
+				6DA049BB2B6BDA3000DC2401 /* BankConnectSample */,
 				379A3CE229E632AB008990FE /* Products */,
+				6DA049C82B6BDA5900DC2401 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +149,7 @@
 			children = (
 				379A3CE129E632AB008990FE /* BankConnect.framework */,
 				379A3CEB29E632AC008990FE /* BankConnectTests.xctest */,
+				6DA049BA2B6BDA3000DC2401 /* BankConnectSample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,14 +157,18 @@
 		379A3CE329E632AB008990FE /* BankConnect */ = {
 			isa = PBXGroup;
 			children = (
-				37BD8BFC29E6E3D000EF4DB7 /* common */,
-				37BD8BF729E6E3D000EF4DB7 /* init */,
-				37BD8BF929E6E3D000EF4DB7 /* models */,
-				37BD8BF229E6E3CF00EF4DB7 /* pref */,
-				37BD8BF429E6E3CF00EF4DB7 /* webhelper */,
+				6DA049B12B6BD9B600DC2401 /* web */,
+				6DA049AE2B6BD99700DC2401 /* viewmodels */,
+				6DA049AB2B6BD96A00DC2401 /* utils */,
+				6DA049A82B6BD92800DC2401 /* pref */,
+				6DA049A32B6BD8EB00DC2401 /* network */,
+				6DA049982B6BD6BF00DC2401 /* models */,
+				6DA049952B6BD68800DC2401 /* init */,
+				6DA049922B6BD66700DC2401 /* enums */,
+				6DA0498F2B6BD5FB00DC2401 /* constants */,
 				379A3CE429E632AB008990FE /* BankConnect.h */,
 				379A3CE529E632AB008990FE /* BankConnect.docc */,
-				37BD8C1129E6E52100EF4DB7 /* BankView.swift */,
+				6DA0498D2B6BD5EB00DC2401 /* BankView.swift */,
 			);
 			path = BankConnect;
 			sourceTree = "<group>";
@@ -123,50 +181,109 @@
 			path = BankConnectTests;
 			sourceTree = "<group>";
 		};
-		37BD8BF229E6E3CF00EF4DB7 /* pref */ = {
+		6DA0498F2B6BD5FB00DC2401 /* constants */ = {
 			isa = PBXGroup;
 			children = (
-				37BD8C0B29E6E4DA00EF4DB7 /* UserPreference.swift */,
+				6DA049902B6BD60E00DC2401 /* Constants.swift */,
 			);
-			path = pref;
+			path = constants;
 			sourceTree = "<group>";
 		};
-		37BD8BF429E6E3CF00EF4DB7 /* webhelper */ = {
+		6DA049922B6BD66700DC2401 /* enums */ = {
 			isa = PBXGroup;
 			children = (
-				37BD8C0D29E6E4F000EF4DB7 /* FinBoxWebView.swift */,
-				37BD8C0F29E6E50100EF4DB7 /* SessionViewModel.swift */,
-				37CC07192B079FE100538F5F /* FinBoxWebViewHandler.swift */,
+				6DA049932B6BD67500DC2401 /* JourneyMode.swift */,
 			);
-			path = webhelper;
+			path = enums;
 			sourceTree = "<group>";
 		};
-		37BD8BF729E6E3D000EF4DB7 /* init */ = {
+		6DA049952B6BD68800DC2401 /* init */ = {
 			isa = PBXGroup;
 			children = (
-				37BD8C0529E6E47100EF4DB7 /* FinBoxBankConnect.swift */,
+				6DA049962B6BD69300DC2401 /* BankConnect.swift */,
 			);
 			path = init;
 			sourceTree = "<group>";
 		};
-		37BD8BF929E6E3D000EF4DB7 /* models */ = {
+		6DA049982B6BD6BF00DC2401 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				37CC07D72B09F49B00538F5F /* FinBoxPayload.swift */,
-				37BD8C0729E6E4A800EF4DB7 /* SessionResponse.swift */,
-				37BD8C0929E6E4B800EF4DB7 /* SessionRequest.swift */,
-				37CC07D12B09E6F300538F5F /* WebEventResponse.swift */,
-				37CC07D32B09E93600538F5F /* WebEventPayload.swift */,
+				6DA049992B6BD6D000DC2401 /* FinBoxPayload.swift */,
+				6DA0499B2B6BD88600DC2401 /* SessionResponse.swift */,
+				6DA0499D2B6BD8A300DC2401 /* SessionRequest.swift */,
+				6DA0499F2B6BD8BA00DC2401 /* WebEventResponse.swift */,
+				6DA049A12B6BD8D500DC2401 /* WebEventPayload.swift */,
+				6DA049D42B6CC92F00DC2401 /* SessionResult.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
 		};
-		37BD8BFC29E6E3D000EF4DB7 /* common */ = {
+		6DA049A32B6BD8EB00DC2401 /* network */ = {
 			isa = PBXGroup;
 			children = (
-				37BD8C0329E6E41800EF4DB7 /* Utils.swift */,
+				6DA049A42B6BD8FC00DC2401 /* APIService.swift */,
+				6DA049A62B6BD90D00DC2401 /* NetworkUtils.swift */,
 			);
-			path = common;
+			path = network;
+			sourceTree = "<group>";
+		};
+		6DA049A82B6BD92800DC2401 /* pref */ = {
+			isa = PBXGroup;
+			children = (
+				6DA049A92B6BD93200DC2401 /* UserPreference.swift */,
+			);
+			path = pref;
+			sourceTree = "<group>";
+		};
+		6DA049AB2B6BD96A00DC2401 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				6DA049AC2B6BD98500DC2401 /* DateUtil.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		6DA049AE2B6BD99700DC2401 /* viewmodels */ = {
+			isa = PBXGroup;
+			children = (
+				6DA049AF2B6BD9A900DC2401 /* SessionViewModel.swift */,
+			);
+			path = viewmodels;
+			sourceTree = "<group>";
+		};
+		6DA049B12B6BD9B600DC2401 /* web */ = {
+			isa = PBXGroup;
+			children = (
+				6DA049B22B6BD9C300DC2401 /* FinBoxWebView.swift */,
+				6DA049B42B6BD9EB00DC2401 /* FinBoxWebViewHandler.swift */,
+			);
+			path = web;
+			sourceTree = "<group>";
+		};
+		6DA049BB2B6BDA3000DC2401 /* BankConnectSample */ = {
+			isa = PBXGroup;
+			children = (
+				6DA049BC2B6BDA3000DC2401 /* BankConnectSampleApp.swift */,
+				6DA049BE2B6BDA3000DC2401 /* ContentView.swift */,
+				6DA049C02B6BDA3100DC2401 /* Assets.xcassets */,
+				6DA049C22B6BDA3100DC2401 /* Preview Content */,
+			);
+			path = BankConnectSample;
+			sourceTree = "<group>";
+		};
+		6DA049C22B6BDA3100DC2401 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6DA049C32B6BDA3100DC2401 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6DA049C82B6BDA5900DC2401 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +336,25 @@
 			productReference = 379A3CEB29E632AC008990FE /* BankConnectTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		6DA049B92B6BDA3000DC2401 /* BankConnectSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DA049C52B6BDA3100DC2401 /* Build configuration list for PBXNativeTarget "BankConnectSample" */;
+			buildPhases = (
+				6DA049B62B6BDA3000DC2401 /* Sources */,
+				6DA049B72B6BDA3000DC2401 /* Frameworks */,
+				6DA049B82B6BDA3000DC2401 /* Resources */,
+				6DA049CD2B6BDA5900DC2401 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6DA049CC2B6BDA5900DC2401 /* PBXTargetDependency */,
+			);
+			name = BankConnectSample;
+			productName = BankConnectSample;
+			productReference = 6DA049BA2B6BDA3000DC2401 /* BankConnectSample.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -226,7 +362,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					379A3CE029E632AB008990FE = {
@@ -234,6 +370,9 @@
 					};
 					379A3CEA29E632AC008990FE = {
 						CreatedOnToolsVersion = 14.3;
+					};
+					6DA049B92B6BDA3000DC2401 = {
+						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
@@ -252,6 +391,7 @@
 			targets = (
 				379A3CE029E632AB008990FE /* BankConnect */,
 				379A3CEA29E632AC008990FE /* BankConnectTests */,
+				6DA049B92B6BDA3000DC2401 /* BankConnectSample */,
 			);
 		};
 /* End PBXProject section */
@@ -261,8 +401,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3725F45429E700E80042189F /* LICENSE in Resources */,
-				37BD8C1829E6EA1A00EF4DB7 /* BankConnect.podspec in Resources */,
+				6DA049D12B6BDE8A00DC2401 /* LICENSE in Resources */,
+				6DA049D32B6BDE9600DC2401 /* BankConnect.podspec in Resources */,
+				6DA049CF2B6BDE8000DC2401 /* CHANGELOG.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +414,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6DA049B82B6BDA3000DC2401 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DA049C42B6BDA3100DC2401 /* Preview Assets.xcassets in Resources */,
+				6DA049C12B6BDA3100DC2401 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -280,19 +430,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37CC071A2B079FE100538F5F /* FinBoxWebViewHandler.swift in Sources */,
+				6DA0498E2B6BD5EB00DC2401 /* BankView.swift in Sources */,
+				6DA049B02B6BD9A900DC2401 /* SessionViewModel.swift in Sources */,
+				6DA049A02B6BD8BA00DC2401 /* WebEventResponse.swift in Sources */,
+				6DA049D52B6CC92F00DC2401 /* SessionResult.swift in Sources */,
+				6DA049942B6BD67500DC2401 /* JourneyMode.swift in Sources */,
 				379A3CE629E632AB008990FE /* BankConnect.docc in Sources */,
-				37CC07D42B09E93600538F5F /* WebEventPayload.swift in Sources */,
-				37BD8C1029E6E50100EF4DB7 /* SessionViewModel.swift in Sources */,
-				37BD8C0829E6E4A800EF4DB7 /* SessionResponse.swift in Sources */,
-				37BD8C0A29E6E4B800EF4DB7 /* SessionRequest.swift in Sources */,
-				37CC07D82B09F49B00538F5F /* FinBoxPayload.swift in Sources */,
-				37CC07D22B09E6F300538F5F /* WebEventResponse.swift in Sources */,
-				37BD8C0E29E6E4F000EF4DB7 /* FinBoxWebView.swift in Sources */,
-				37BD8C0C29E6E4DA00EF4DB7 /* UserPreference.swift in Sources */,
-				37BD8C1229E6E52100EF4DB7 /* BankView.swift in Sources */,
-				37BD8C0629E6E47100EF4DB7 /* FinBoxBankConnect.swift in Sources */,
-				37BD8C0429E6E41800EF4DB7 /* Utils.swift in Sources */,
+				6DA049A72B6BD90D00DC2401 /* NetworkUtils.swift in Sources */,
+				6DA049A52B6BD8FC00DC2401 /* APIService.swift in Sources */,
+				6DA0499C2B6BD88600DC2401 /* SessionResponse.swift in Sources */,
+				6DA0499E2B6BD8A300DC2401 /* SessionRequest.swift in Sources */,
+				6DA049A22B6BD8D500DC2401 /* WebEventPayload.swift in Sources */,
+				6DA049912B6BD60E00DC2401 /* Constants.swift in Sources */,
+				6DA049B52B6BD9EB00DC2401 /* FinBoxWebViewHandler.swift in Sources */,
+				6DA049AA2B6BD93200DC2401 /* UserPreference.swift in Sources */,
+				6DA0499A2B6BD6D000DC2401 /* FinBoxPayload.swift in Sources */,
+				6DA049B32B6BD9C300DC2401 /* FinBoxWebView.swift in Sources */,
+				6DA049972B6BD69300DC2401 /* BankConnect.swift in Sources */,
+				6DA049AD2B6BD98500DC2401 /* DateUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +459,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6DA049B62B6BDA3000DC2401 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DA049BF2B6BDA3000DC2401 /* ContentView.swift in Sources */,
+				6DA049BD2B6BDA3000DC2401 /* BankConnectSampleApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -311,6 +475,11 @@
 			isa = PBXTargetDependency;
 			target = 379A3CE029E632AB008990FE /* BankConnect */;
 			targetProxy = 379A3CED29E632AC008990FE /* PBXContainerItemProxy */;
+		};
+		6DA049CC2B6BDA5900DC2401 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 379A3CE029E632AB008990FE /* BankConnect */;
+			targetProxy = 6DA049CB2B6BDA5900DC2401 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -531,6 +700,75 @@
 			};
 			name = Release;
 		};
+		6DA049C62B6BDA3100DC2401 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BankConnectSample/Preview Content\"";
+				DEVELOPMENT_TEAM = 46F33UJL5U;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = in.finbox.BankConnectSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6DA049C72B6BDA3100DC2401 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BankConnectSample/Preview Content\"";
+				DEVELOPMENT_TEAM = 46F33UJL5U;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = in.finbox.BankConnectSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -557,6 +795,15 @@
 			buildConfigurations = (
 				379A3CF929E632AC008990FE /* Debug */,
 				379A3CFA29E632AC008990FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6DA049C52B6BDA3100DC2401 /* Build configuration list for PBXNativeTarget "BankConnectSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DA049C62B6BDA3100DC2401 /* Debug */,
+				6DA049C72B6BDA3100DC2401 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

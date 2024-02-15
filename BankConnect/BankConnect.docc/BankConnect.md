@@ -19,11 +19,19 @@ Build BankConnect with API Key, Link Id
 
 ```
 let _ = FinBoxBankConnect.Builder()
-    .linkId(id: UUID().uuidString)
-    .apiKey(key: apiKey)
+    .apiKey(API_KEY)
+    .linkId(UUID().uuidString)
+    .fromDate("dd/MM/yyyy")
+    .toDate("dd/MM/yyyy")
     .build();
 ```
 
+## NOTE
+
+Following will be shared by FinBox team at the time of integration:
+
+- `API_KEY`
+- `BC_SDK_VERSION`
 
 ## Show BankConnect Screen
 

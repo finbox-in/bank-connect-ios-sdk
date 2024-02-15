@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "BankConnect"
-  spec.version      = "0.2.1"
+  spec.version      = "0.3.0"
   spec.summary      = "BankConnect IOS SDK to enable BankConnect journey for IOS devices"
 
   # This description is used to generate tags and improve search results.
@@ -26,7 +26,7 @@ Pod::Spec.new do |spec|
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = "FinBox BankConnect allows users to submit their bank account statements in your app, then processes them and shares the enriched data with you. This SDK will help you integrate BankConnect in your application flow."
 
-  spec.homepage     = "https://gitlab.com/finbox/bankconnect/mobile/ios-bank-connect"
+  spec.homepage     = "https://github.com/finbox-in/bank-connect-ios-sdk/"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -51,9 +51,8 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "Srikar Reddy" => "srikar@finbox.in" }
-  # spec.authors            = { "stillecodeur" => "stillecodeur@gmail.com" }
-  # spec.social_media_url   = "https://twitter.com/stillecodeur"
+  spec.authors             = { "Srikar Reddy" => "srikar@finbox.in",
+                                "Ashutosh Jena" => "ashutosh.jena@finbox.in" }
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -78,8 +77,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://gitlab.com/finbox/bankconnect/mobile/ios-bank-connect.git", :tag => "#{spec.version}" }
-
+  spec.source       = { :git => "https://github.com/finbox-in/bank-connect-ios-sdk.git", :tag => "#{spec.version}" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
