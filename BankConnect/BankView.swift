@@ -12,9 +12,13 @@ import SwiftUI
 
 public struct BankView: View {
     
-    // Result Function
+    /// Result Closure
     public let bankResult : ((FinBoxPayload) -> Void)
     
+    /// A property wrapper dismiss that accesses the dismiss action from the environment.
+    @Environment(\.dismiss) private var dismiss
+    
+    /// ViewModel
     @ObservedObject var viewModel = SessionViewModel()
     
     public init(bankResult: @escaping (FinBoxPayload) -> Void) {
@@ -48,7 +52,8 @@ public struct BankView: View {
     
     func handleError(error: String) -> some View {
         bankResult(FinBoxPayload(message: error, linkId: "", entityId: "", errorType: ""))
-        return Text("\(String(describing: error))")
+        dismiss()
+        return EmptyView()
     }
 }
 
