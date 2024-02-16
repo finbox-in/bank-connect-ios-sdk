@@ -45,7 +45,7 @@ struct APIService {
         let task = URLSession.shared.dataTask(with: requestParams) { data, response, error in
             if let error = error {
                 //                self.handleClientError(completion: completion, error: error)
-                self.handleError(completion: completion, error: error)
+                self.handleError(completion: completion, error: error.localizedDescription)
                 return
             }
             
