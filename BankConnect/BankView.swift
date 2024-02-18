@@ -12,14 +12,17 @@ import SwiftUI
 
 public struct BankView: View {
     
+    /// ViewModel
+    @ObservedObject var viewModel = SessionViewModel()
+    
     /// Result Closure
     public let bankResult : ((FinBoxPayload) -> Void)
     
     /// A property wrapper dismiss that accesses the dismiss action from the environment.
     @Environment(\.dismiss) private var dismiss
     
-    /// ViewModel
-    @ObservedObject var viewModel = SessionViewModel()
+    /// Instance of Status to hold callback sent status
+    private static var status = Status()
     
     public init(bankResult: @escaping (FinBoxPayload) -> Void) {
         self.bankResult = bankResult
@@ -51,7 +54,11 @@ public struct BankView: View {
     }
     
     func handleError(error: String) -> some View {
-        bankResult(FinBoxPayload(message: error, linkId: "", entityId: "", errorType: ""))
+        // Check if the callback has already been sent
+        if !BankView.status.callbackSent {
+            BankView.status.updateStatus()
+            bankResult(FinBoxPayload(message: error, linkId: "", entityId: "", errorType: ""))
+        }
         dismiss()
         return EmptyView()
     }
