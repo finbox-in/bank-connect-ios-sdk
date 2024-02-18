@@ -1,5 +1,5 @@
 //
-//  CallbackSent.swift
+//  Status.swift
 //  BankConnect
 //
 //  Created by Ashutosh Jena on 16/02/24.
