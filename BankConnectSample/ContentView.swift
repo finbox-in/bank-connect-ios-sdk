@@ -37,7 +37,13 @@ struct ContentView: View {
             .linkId(id: "UNIQUE_ID")
             .fromDate(start: "DD/MM/YYYY")
             .toDate(end: "DD/MM/YYYY")
-            .journeyMode(mode: JourneyMode.NORMAL)
+            .mode(Mode.PDF)
+            .journeyMode(JourneyMode.NORMAL)
+            .mobileNumber("7978646904")
+            .aaJourneyMode(AAJourneyMode.ONCE_WITH_RECURRING)
+            .aaRecurringFrequencyUnit(AARecurringFrequencyUnit.DAY)
+            .aaRecurringFrequencyValue(3)
+            .aaRecurringTenureMonthCount(2)
             .build()
         
         return BankView() {
