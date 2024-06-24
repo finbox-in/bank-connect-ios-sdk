@@ -42,7 +42,12 @@ public struct BankView: View {
                 }
             } else {
                 // First time the screen is loaded
-                ProgressView()
+                if #available(iOS 14, *) {
+                    // Show progress
+                    ProgressView()
+                } else {
+                    // Progress View is not available
+                }
             }
         }.onAppear(perform: {
             // Fetch the session url
