@@ -10,7 +10,9 @@ import Foundation
 /// BankConnect SDK Initializer
 public class BankConnect {
     
-    private init(key: String, id: String, start: String?, end: String?, name: String?, mode: JourneyMode) {
+    private init(key: String, id: String, start: String?, end: String?, name: String?, journeyMode: JourneyMode?, mode: Mode?,
+                 mobileNumber: String?, aaJourneyMode: AAJourneyMode?, aaRecurringTenureMonthCount: Int?,
+                 aaRecurringFrequencyUnit: AARecurringFrequencyUnit?, aaRecurringFrequencyValue: Int?) {
         
     }
     
@@ -26,6 +28,12 @@ public class BankConnect {
         private var endDate: String?
         private var bankName: String?
         private var journeyMode: JourneyMode = JourneyMode.NORMAL
+        private var mode: Mode?
+        private var mobileNumber: String?
+        private var aaJourneyMode: AAJourneyMode?
+        private var aaRecurringTenureMonthCount: Int?
+        private var aaRecurringFrequencyUnit: AARecurringFrequencyUnit?
+        private var aaRecurringFrequencyValue: Int?
         
         /// Set API Key
         /// - Parameter key: Client API Key
@@ -34,7 +42,7 @@ public class BankConnect {
             self.key = key
             return self
         }
-
+        
         /// Set Link Id
         /// - Parameter id: Unique user id
         /// - Returns Instance of `BankConnect.Builder`
@@ -70,11 +78,59 @@ public class BankConnect {
         /// Set Journey Mode
         /// - Parameter mode: Mode of the user journey
         /// - Returns Instance of `BankConnect.Builder`
-        public func journeyMode(_ mode: JourneyMode) -> Builder {
-            self.journeyMode = mode
+        public func journeyMode(_ mode: JourneyMode?) -> Builder {
+            self.journeyMode = mode ?? JourneyMode.NORMAL
             return self
         }
-
+        
+        /// Set Mode
+        /// - Parameter mode: Mode of the user journey
+        /// - Returns Instance of `BankConnect.Builder`
+        public func mode(_ mode: Mode?) -> Builder {
+            self.mode = mode
+            return self
+        }
+        
+        /// Set Mobile number
+        /// - Parameter mobileNumber: Mobile number of the user
+        /// - Returns Instance of `BankConnect.Builder`
+        public func mobileNumber(_ mobileNumber: String?) -> Builder {
+            self.mobileNumber = mobileNumber
+            return self
+        }
+        
+        /// Set Account Aggregator Journey Mode
+        /// - Parameter aaJourneyMode: Account Aggregator journey mode of the user journey
+        /// - Returns Instance of `BankConnect.Builder`
+        public func aaJourneyMode(_ aaJourneyMode: AAJourneyMode?) -> Builder {
+            self.aaJourneyMode = aaJourneyMode
+            return self
+        }
+        
+        /// Set Account Aggregator Recurring Tenure Month Count
+        /// - Parameter aaRecurringTenureMonthCount: Account Aggregator recurring tenure month count
+        /// - Returns Instance of `BankConnect.Builder`
+        public func aaRecurringTenureMonthCount(_ aaRecurringTenureMonthCount: Int?) -> Builder {
+            self.aaRecurringTenureMonthCount = aaRecurringTenureMonthCount
+            return self
+        }
+        
+        /// Set Account Aggregator Recurring Frequency
+        /// - Parameter aaRecurringFrequencyUnit: Account Aggregator recurring frequency
+        /// - Returns Instance of `BankConnect.Builder`
+        public func aaRecurringFrequencyUnit(_ aaRecurringFrequencyUnit: AARecurringFrequencyUnit?) -> Builder {
+            self.aaRecurringFrequencyUnit = aaRecurringFrequencyUnit
+            return self
+        }
+        
+        /// Set Account Aggregator Recurring Frequency Value
+        /// - Parameter aaRecurringFrequencyValue: Account Aggregator recurring frequency value
+        /// - Returns Instance of `BankConnect.Builder`
+        public func aaRecurringFrequencyValue(_ aaRecurringFrequencyValue: Int?) -> Builder {
+            self.aaRecurringFrequencyValue = aaRecurringFrequencyValue
+            return self
+        }
+        
         /// Create an instance of Builder
         /// - Returns Instance of `BankConnect.Builder` with passed parameters
         public func build() -> BankConnect {
@@ -93,17 +149,23 @@ public class BankConnect {
             if (!validateDate(endDate)) {
                 fatalError("Invalid toDate. Expected format: dd/MM/yyyy.")
             }
-
-            savePreferences(apiKey: key, linkId: id, fromDate: startDate, toDate: endDate, bankName: bankName, journeyMode: journeyMode)
-
-            return BankConnect(key: key, id: id, start: self.startDate, end: self.endDate, name: self.bankName, mode: self.journeyMode)
+            
+            savePreferences(apiKey: key, linkId: id, fromDate: self.startDate, toDate: self.endDate, bankName: self.bankName, journeyMode: self.journeyMode,
+                            mode: self.mode, mobileNumber: self.mobileNumber, aaJourneyMode: self.aaJourneyMode, aaRecurringTenureMonthCount: self.aaRecurringTenureMonthCount,
+                            aaRecurringFrequencyUnit: self.aaRecurringFrequencyUnit, aaRecurringFrequencyValue: self.aaRecurringFrequencyValue)
+            
+            return BankConnect(key: key, id: id, start: self.startDate, end: self.endDate, name: self.bankName, journeyMode: self.journeyMode,
+                               mode: self.mode, mobileNumber: self.mobileNumber ,aaJourneyMode: self.aaJourneyMode, aaRecurringTenureMonthCount: self.aaRecurringTenureMonthCount,
+                               aaRecurringFrequencyUnit: self.aaRecurringFrequencyUnit, aaRecurringFrequencyValue: self.aaRecurringFrequencyValue)
         }
-
+        
         /// Saves user details in local storage
-        private func savePreferences(apiKey: String, linkId: String, fromDate: String?, toDate: String?, bankName: String?, journeyMode: JourneyMode) {
+        private func savePreferences(apiKey: String, linkId: String, fromDate: String?, toDate: String?, bankName: String?, journeyMode: JourneyMode,
+                                     mode: Mode?, mobileNumber: String?, aaJourneyMode: AAJourneyMode?, aaRecurringTenureMonthCount: Int?,
+                                     aaRecurringFrequencyUnit: AARecurringFrequencyUnit?, aaRecurringFrequencyValue: Int?) {
             // Create a instance of preferences
             let userPreference = UserPreference()
-
+            
             // Save the details in preferences
             userPreference.apiKey = apiKey
             userPreference.linkId = linkId
@@ -111,6 +173,12 @@ public class BankConnect {
             userPreference.toDate = toDate
             userPreference.bankName = bankName
             userPreference.journeyMode = journeyMode
+            userPreference.mode = mode
+            userPreference.mobileNumber = mobileNumber
+            userPreference.aaJourneyMode = aaJourneyMode
+            userPreference.aaRecurringTenureMonthCount = aaRecurringTenureMonthCount
+            userPreference.aaRecurringFrequencyUnit = aaRecurringFrequencyUnit
+            userPreference.aaRecurringFrequencyValue = aaRecurringFrequencyValue
         }
         
         /// Validates Date Strings passed to the builder and throws Fatal Errors
