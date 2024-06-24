@@ -152,9 +152,15 @@ public class BankConnect {
                 fatalError("Invalid toDate. Expected format: dd/MM/yyyy.")
             }
             
-            // AA recurring tenure month is not valid
+            if (aaRecurringTenureMonthCount != nil && invalidTenureMonth(aaRecurringTenureMonthCount!)) {
+                // AA recurring tenure month is not valid
+                fatalError("AA Recurring Tenure Month Count is invalid. The tenure must be between 1 to 24 months, inclusive.")
+            }
             
-            // AA recurring frequency value is not valid
+            if (aaRecurringFrequencyValue != nil && invalidFrequencyValue(aaRecurringFrequencyValue!)) {
+                // AA recurring frequency value is not valid
+                fatalError("AA Recurring Frequency Value is invalid. The frequency must be between 1 and 3, inclusive.")
+            }
             
             if (mobileNumber != nil && invalidMobileNumber(mobileNumber!)) {
                 // Phone number length should be 10 digits
@@ -203,8 +209,23 @@ public class BankConnect {
             return validateDateFormat(date)
         }
         
+        /// Checks if the provided month count is invalid.
+        /// - Parameter frequencyValue: AA Recurring Frequency Value
+        /// - Returns `true` if tenure month is not in the range of 1 to 24, `false` otherwise.
+        private func invalidTenureMonth(_ monthCount: Int) -> Bool {
+            return !(1...24).contains(monthCount)
+        }
+        
+        
+        /// Checks if the provided frequency is invalid.
+        /// - Parameter frequencyValue: AA Recurring Frequency Value
+        /// - Returns `true` if frequency is not in the range of 1 to 3, `false` otherwise.
+        private func invalidFrequencyValue(_ frequencyValue: Int) -> Bool {
+            return !(1...3).contains(frequencyValue)
+        }
+        
         /// Checks if the mobile number is valid or not
-        /// - Parameter mobile: Date String input to the builder
+        /// - Parameter mobile: Mobile number
         /// - Returns `true` if number is not valid, `false` otherwise.
         private func invalidMobileNumber(_ mobile: String) -> Bool {
             let trimmedNumber = mobile.trimmingCharacters(in: .whitespacesAndNewlines)
