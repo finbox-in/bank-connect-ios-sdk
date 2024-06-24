@@ -50,7 +50,7 @@ struct APIService {
             }
             
             // Check if there is a response and data
-            guard let httpResponse = response as? HTTPURLResponse, let responseData = data else {
+            guard let httpResponse = response as? HTTPURLResponse, let _ = data else {
                 debugPrint("Invalid response or no data")
                 return
             }

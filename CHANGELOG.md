@@ -1,5 +1,10 @@
 #  CHANGELOG
 
+## 0.4.1
+
+Make ProgressView visible on newer versions
+
+
 ## 0.4.0
 
 Add AA config
