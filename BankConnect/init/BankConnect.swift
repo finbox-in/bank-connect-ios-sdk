@@ -207,7 +207,11 @@ public class BankConnect {
         /// - Parameter mobile: Date String input to the builder
         /// - Returns `true` if number is not valid, `false` otherwise.
         private func invalidMobileNumber(_ mobile: String) -> Bool {
-            
+            let trimmedNumber = mobile.trimmingCharacters(in: .whitespacesAndNewlines)
+            if (trimmedNumber != mobile) {
+                // There are spaces in the mobile number
+                return true
+            }
             
             // Check if the mobile number has exactly 10 digits
             if (mobile.count != 10) {
