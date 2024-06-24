@@ -27,7 +27,7 @@ public class BankConnect {
         private var startDate: String?
         private var endDate: String?
         private var bankName: String?
-        private var journeyMode: JourneyMode = JourneyMode.NORMAL
+        private var journeyMode: JourneyMode?
         private var mode: Mode?
         private var mobileNumber: String?
         private var aaJourneyMode: AAJourneyMode?
@@ -79,7 +79,7 @@ public class BankConnect {
         /// - Parameter mode: Mode of the user journey
         /// - Returns Instance of `BankConnect.Builder`
         public func journeyMode(_ mode: JourneyMode?) -> Builder {
-            self.journeyMode = mode ?? JourneyMode.NORMAL
+            self.journeyMode = mode
             return self
         }
         
@@ -160,7 +160,7 @@ public class BankConnect {
         }
         
         /// Saves user details in local storage
-        private func savePreferences(apiKey: String, linkId: String, fromDate: String?, toDate: String?, bankName: String?, journeyMode: JourneyMode,
+        private func savePreferences(apiKey: String, linkId: String, fromDate: String?, toDate: String?, bankName: String?, journeyMode: JourneyMode?,
                                      mode: Mode?, mobileNumber: String?, aaJourneyMode: AAJourneyMode?, aaRecurringTenureMonthCount: Int?,
                                      aaRecurringFrequencyUnit: AARecurringFrequencyUnit?, aaRecurringFrequencyValue: Int?) {
             // Create a instance of preferences
