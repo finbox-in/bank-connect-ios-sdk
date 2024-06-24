@@ -1,6 +1,6 @@
 #  CHANGELOG
 
-## 0.4.1
+## 0.4.2
 
 Make ProgressView visible on newer versions
 
