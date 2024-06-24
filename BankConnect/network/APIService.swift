@@ -140,7 +140,21 @@ struct APIService {
         }
         
         // Create a session request object
-        return SessionRequest(linkId: linkId, apiKey: apiKey, redirectURL: userPref.redirectUrl, fromDate: userPref.fromDate, toDate: userPref.toDate, logoURL: userPref.logoUrl, bankName: userPref.bankName, journeyMode: userPref.journeyMode?.rawValue)
+        return SessionRequest(linkId: linkId,
+                              apiKey: apiKey,
+                              redirectURL: userPref.redirectUrl,
+                              fromDate: userPref.fromDate,
+                              toDate: userPref.toDate,
+                              logoURL: userPref.logoUrl,
+                              bankName: userPref.bankName,
+                              journeyMode: userPref.journeyMode?.rawValue,
+                              mode: userPref.mode?.rawValue,
+                              mobileNumber: userPref.mobileNumber,
+                              aaJourneyMode: userPref.aaJourneyMode?.rawValue,
+                              aaRecurringTenureMonthCount: userPref.aaRecurringTenureMonthCount,
+                              aaRecurringFrequencyUnit: userPref.aaRecurringFrequencyUnit?.rawValue,
+                              aaRecurringFrequencyValue: userPref.aaRecurringFrequencyValue
+        )
     }
     
     /// Handles client errors
