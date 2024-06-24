@@ -17,18 +17,25 @@ public struct BankView: View {
     
     @ObservedObject var viewModel = SessionViewModel()
     
+    /// This property tracks if the viewmodel is fetching session
+    /// State marks this as mutable
+    @State var fetchStarted = false
+    
     public init(bankResult: @escaping (FinBoxPayload) -> Void) {
         self.bankResult = bankResult
     }
     
     public var body: some View {
-        if viewModel.sessionFetched {
-            VStack {
-                if viewModel.sessionResult?.error == nil {
-                    if viewModel.sessionResult?.sessionURL != nil {
-                        FinBoxWebView(urlStr: viewModel.sessionResult?.sessionURL, bankResult: bankResult)
+        VStack {
+            if (fetchStarted) {
+                // ViewModel is fetching the session
+                if (viewModel.sessionResult?.error == nil) {
+                    if (viewModel.sessionResult?.sessionURL != nil) {
+                        // Load the webpage
+                        FinBoxWebView(urlStr: viewModel.sessionResult?.sessionURL,
+                                      bankResult: bankResult)
                     } else {
-                        handleError(error: "Invalid session url")
+                        handleError(error: "Invalid Session Url")
                     }
                 } else {
                     handleError(error: viewModel.sessionResult?.error ?? "Unknown Error")
@@ -56,4 +63,3 @@ public struct BankView: View {
         return Text("\(String(describing: error))")
     }
 }
-
