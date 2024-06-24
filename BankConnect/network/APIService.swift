@@ -71,6 +71,11 @@ struct APIService {
                     let sessionResponse: SessionResponse = try JSONDecoder().decode(SessionResponse.self, from: data)
                     
                     let result = SessionResult(error: nil, sessionURL: sessionResponse.redirectUrl)
+                    
+                    if (result.sessionURL == nil) {
+                        self.handleClientError(completion: completion, error: "Session url is not present")
+                    }
+                    
                     // Send the callback
                     sendCallback(completion: completion, result: result)
                 } catch {

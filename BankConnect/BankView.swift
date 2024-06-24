@@ -46,8 +46,10 @@ public struct BankView: View {
             }
         }.onAppear(perform: {
             // Fetch the session url
-            viewModel.fetchSession()
-            self.fetchStarted = true
+            viewModel.fetchSession{ result in
+                // API fetching completed
+                self.fetchStarted = result
+            }
         })
     }
     
