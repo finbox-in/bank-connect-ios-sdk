@@ -143,11 +143,22 @@ public class BankConnect {
             }
             
             if (!validateDate(startDate)) {
+                // Start date is not valid
                 fatalError("Invalid fromDate. Expected format: dd/MM/yyyy.")
             }
             
             if (!validateDate(endDate)) {
+                // End date is not valid
                 fatalError("Invalid toDate. Expected format: dd/MM/yyyy.")
+            }
+            
+            // AA recurring tenure month is not valid
+            
+            // AA recurring frequency value is not valid
+            
+            if (mobileNumber != nil && invalidMobileNumber(mobileNumber!)) {
+                // Phone number length should be 10 digits
+                fatalError("Phone number length must be 10 digits and should contain only numbers.")
             }
             
             savePreferences(apiKey: key, linkId: id, fromDate: self.startDate, toDate: self.endDate, bankName: self.bankName, journeyMode: self.journeyMode,
@@ -190,6 +201,22 @@ public class BankConnect {
             }
             
             return validateDateFormat(date)
+        }
+        
+        /// Checks if the mobile number is valid or not
+        /// - Parameter mobile: Date String input to the builder
+        /// - Returns `true` if number is not valid, `false` otherwise.
+        private func invalidMobileNumber(_ mobile: String) -> Bool {
+            
+            
+            // Check if the mobile number has exactly 10 digits
+            if (mobile.count != 10) {
+                return true
+            }
+            
+            // Check if the mobile number contains all the numbers
+            let numberCharacterSet = CharacterSet.decimalDigits
+            return !CharacterSet(charactersIn: mobile).isSubset(of: numberCharacterSet)
         }
     }
 }
