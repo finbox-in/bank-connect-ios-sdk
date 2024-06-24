@@ -1,0 +1,13 @@
+version: "Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)"
+options: "f14cc1cdc6fa24d5d0a02c491210d347cf23e446eb8fc6051b4903052f33d6d2"
+build_start_time: [1681888007, 418999000]
+build_end_time: [1681888017, 515206000]
+inputs:
+  "/Users/srikar/Work/Ios/BankConnect/BankConnect/BankView.swift": [1681392762, 31597350]
+  "/Users/srikar/Work/Ios/BankConnect/BankConnect/common/Utils.swift": [1681304736, 188633060]
+  "/Users/srikar/Work/Ios/BankConnect/BankConnect/init/FinBoxBankConnect.swift": [1681381111, 595433143]
+  "/Users/srikar/Work/Ios/BankConnect/BankConnect/models/SessionRequest.swift": [1681305001, 532350797]
+  "/Users/srikar/Work/Ios/BankConnect/BankConnect/models/SessionResponse.swift": [1681304899, 868007928]
+  "/Users/srikar/Work/Ios/BankConnect/BankConnect/pref/UserPreference.swift": [1681304926, 771722501]
+  "/Users/srikar/Work/Ios/BankConnect/BankConnect/webhelper/FinBoxWebView.swift": [1681305042, 202772972]
+  "/Users/srikar/Work/Ios/BankConnect/BankConnect/webhelper/SessionViewModel.swift": [1681304978, 631209785]

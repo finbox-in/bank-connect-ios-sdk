@@ -86,12 +86,12 @@ struct APIService {
                 // Client error (status code 400 to 499)
                 debugPrint("Client Error: \(httpResponse.statusCode)")
                 // Handle client error
-                self.handleClientError(completion: completion, error: error ?? "Some Client Error Occured")
+                self.handleClientError(completion: completion, error: error ?? "Client Error Occured")
                 
             case 500...599:
                 // Handle server error
                 debugPrint("Server Error: \(httpResponse.statusCode)")
-                self.handleServerError(completion: completion, error: error ?? "Some Server Error Occured")
+                self.handleServerError(completion: completion, error: error ?? "Server Error Occured")
                 
             default:
                 // Handle other status codes

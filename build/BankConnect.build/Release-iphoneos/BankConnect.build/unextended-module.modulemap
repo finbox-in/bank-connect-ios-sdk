@@ -1,0 +1,10 @@
+framework module BankConnect {
+  umbrella header "BankConnect.h"
+
+  export *
+  module * { export * }
+}
+
+module BankConnect.__Swift {
+  exclude header "BankConnect-Swift.h"
+}

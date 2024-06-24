@@ -79,7 +79,6 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/finbox-in/bank-connect-ios-sdk.git", :tag => "#{spec.version}" }
 
-
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  CocoaPods is smart about how it includes source code. For source files
