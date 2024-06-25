@@ -70,7 +70,7 @@ public class BankConnect {
         /// Set Bank Name
         /// - Parameter name: Short name of the Bank
         /// - Returns Instance of `BankConnect.Builder`
-        public func bank(_ name: String) -> Builder {
+        public func bank(_ name: String?) -> Builder {
             self.bankName = name
             return self
         }
