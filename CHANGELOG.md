@@ -1,14 +1,10 @@
 #  CHANGELOG
 
-## 0.4.5
-
-Make ProgressView visible on newer versions
-Remove unused or duplicate files
-
-
-## 0.4.0
+## 0.4.6
 
 Add AA config
+Make ProgressView visible on newer versions
+Remove unused or duplicate files
 
 
 ## 0.3.0

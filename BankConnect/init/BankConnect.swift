@@ -54,7 +54,7 @@ public class BankConnect {
         /// Set Start Date
         /// - Parameter start: Start Date of the form dd/MM/yyyy
         /// - Returns Instance of `BankConnect.Builder`
-        public func fromDate(_ start: String) -> Builder {
+        public func fromDate(_ start: String?) -> Builder {
             self.startDate = start
             return self
         }
@@ -62,7 +62,7 @@ public class BankConnect {
         /// Set End Date
         /// - Parameter end: End Date of the form dd/MM/yyyy
         /// - Returns Instance of `BankConnect.Builder`
-        public func toDate(_ end: String) -> Builder {
+        public func toDate(_ end: String?) -> Builder {
             self.endDate = end
             return self
         }
@@ -142,12 +142,12 @@ public class BankConnect {
                 fatalError("Link Id cannot be null")
             }
             
-            if (!validateDate(startDate)) {
+            if (startDate != nil && !validateDate(startDate!)) {
                 // Start date is not valid
                 fatalError("Invalid fromDate. Expected format: dd/MM/yyyy.")
             }
             
-            if (!validateDate(endDate)) {
+            if (endDate != nil && !validateDate(endDate!)) {
                 // End date is not valid
                 fatalError("Invalid toDate. Expected format: dd/MM/yyyy.")
             }
@@ -201,12 +201,8 @@ public class BankConnect {
         /// Validates Date Strings passed to the builder and throws Fatal Errors
         /// - Parameter dateStr: Date String input to the builder
         /// - Returns `true` if date is valid, `false` otherwise.
-        private func validateDate(_ dateStr: String?) -> Bool {
-            guard let date = dateStr else {
-                return false
-            }
-            
-            return validateDateFormat(date)
+        private func validateDate(_ dateStr: String) -> Bool {
+            return validateDateFormat(dateStr)
         }
         
         /// Checks if the provided month count is invalid.
