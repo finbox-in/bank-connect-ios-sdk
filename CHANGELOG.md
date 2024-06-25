@@ -1,8 +1,9 @@
 #  CHANGELOG
 
-## 0.4.3
+## 0.4.4
 
 Make ProgressView visible on newer versions
+Remove unused or duplicate files
 
 
 ## 0.4.0
