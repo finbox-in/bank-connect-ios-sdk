@@ -50,7 +50,7 @@ struct APIService {
             }
             
             // Check if there is a response and data
-            guard let httpResponse = response as? HTTPURLResponse, let responseData = data else {
+            guard let httpResponse = response as? HTTPURLResponse, let _ = data else {
                 debugPrint("Invalid response or no data")
                 return
             }
@@ -71,6 +71,11 @@ struct APIService {
                     let sessionResponse: SessionResponse = try JSONDecoder().decode(SessionResponse.self, from: data)
                     
                     let result = SessionResult(error: nil, sessionURL: sessionResponse.redirectUrl)
+                    
+                    if (result.sessionURL == nil) {
+                        self.handleClientError(completion: completion, error: "Session url is not present")
+                    }
+                    
                     // Send the callback
                     sendCallback(completion: completion, result: result)
                 } catch {
@@ -135,7 +140,21 @@ struct APIService {
         }
         
         // Create a session request object
-        return SessionRequest(linkId: linkId, apiKey: apiKey, redirectURL: userPref.redirectUrl, fromDate: userPref.fromDate, toDate: userPref.toDate, logoURL: userPref.logoUrl, bankName: userPref.bankName, journeyMode: userPref.journeyMode?.rawValue)
+        return SessionRequest(linkId: linkId,
+                              apiKey: apiKey,
+                              redirectURL: userPref.redirectUrl,
+                              fromDate: userPref.fromDate,
+                              toDate: userPref.toDate,
+                              logoURL: userPref.logoUrl,
+                              bankName: userPref.bankName,
+                              journeyMode: userPref.journeyMode?.rawValue,
+                              mode: userPref.mode?.rawValue,
+                              mobileNumber: userPref.mobileNumber,
+                              aaJourneyMode: userPref.aaJourneyMode?.rawValue,
+                              aaRecurringTenureMonthCount: userPref.aaRecurringTenureMonthCount,
+                              aaRecurringFrequencyUnit: userPref.aaRecurringFrequencyUnit?.rawValue,
+                              aaRecurringFrequencyValue: userPref.aaRecurringFrequencyValue
+        )
     }
     
     /// Handles client errors

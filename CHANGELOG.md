@@ -1,9 +1,19 @@
 #  CHANGELOG
 
+## 0.4.3
+
+Make ProgressView visible on newer versions
+
+
+## 0.4.0
+
+Add AA config
+
 
 ## 0.3.0
 
 Add Multi Bank Session Flow
+
 
 ## 0.2.1
 

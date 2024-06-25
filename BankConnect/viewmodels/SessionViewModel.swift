@@ -13,14 +13,22 @@ class SessionViewModel: ObservableObject {
     @Published var sessionResult: SessionResult?
     var sessionFetched = false
     
-    func fetchSession() {
+    func fetchSession(completion: @escaping (Bool) -> Void) {
         APIService.instance.fetchSession { result in
             debugPrint("Received Result in viewmodel")
             self.sessionFetched = true
             DispatchQueue.main.async {
                 // Update sessionUrl on main thread when the network call completes
                 self.sessionResult = result
+                // Send the callback to the view
+                self.sendCallback(completion: completion)
             }
+        }
+    }
+    
+    private func sendCallback(completion: @escaping (Bool) -> Void) {
+        DispatchQueue.global().asyncAfter(deadline: .now()) {
+            completion(true)
         }
     }
     

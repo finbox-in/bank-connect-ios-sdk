@@ -17,6 +17,12 @@ struct SessionRequest: Hashable, Codable {
     let logoURL: String?
     let bankName: String?
     let journeyMode: String?
+    let mode: String?
+    let mobileNumber: String?
+    let aaJourneyMode: String?
+    let aaRecurringTenureMonthCount: Int?
+    let aaRecurringFrequencyUnit: String?
+    let aaRecurringFrequencyValue: Int?
     
     enum CodingKeys: String, CodingKey {
         case linkId = "link_id"
@@ -27,5 +33,11 @@ struct SessionRequest: Hashable, Codable {
         case logoURL = "logo_url"
         case bankName = "bank_name"
         case journeyMode = "journey_mode"
+        case mode = "mode"
+        case mobileNumber = "mobile_number"
+        case aaJourneyMode = "aa_journey_mode"
+        case aaRecurringTenureMonthCount = "aa_recurring_tenure_month_count"
+        case aaRecurringFrequencyUnit = "aa_recurring_frequency_unit"
+        case aaRecurringFrequencyValue = "aa_recurring_frequency_value"
     }
 }

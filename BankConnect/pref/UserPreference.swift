@@ -85,16 +85,86 @@ class UserPreference {
         }
     }
     
-    // Mode
+    // Journey Mode
     var journeyMode: JourneyMode? {
         get {
-            guard let mode = userDefaults.object(forKey: FINBOX_BANK_CONNECT_MODE) as? String ?? nil else {
+            guard let mode = userDefaults.object(forKey: FINBOX_BANK_CONNECT_JOURNEY_MODE) as? String ?? nil else {
                 return nil
             }
             return JourneyMode(rawValue: mode)
         }
         set {
+            userDefaults.set(newValue?.rawValue, forKey: FINBOX_BANK_CONNECT_JOURNEY_MODE)
+        }
+    }
+    
+    // Mode
+    var mode: Mode? {
+        get {
+            guard let mode = userDefaults.object(forKey: FINBOX_BANK_CONNECT_MODE) as? String ?? nil else {
+                return nil
+            }
+            return Mode(rawValue: mode)
+        }
+        set {
             userDefaults.set(newValue?.rawValue, forKey: FINBOX_BANK_CONNECT_MODE)
+        }
+    }
+    
+    // Mobile number
+    var mobileNumber: String? {
+        get {
+            return userDefaults.object(forKey: FINBOX_BANK_CONNECT_MOBILE_NUMBER) as? String ?? nil
+        }
+        set {
+            userDefaults.set(newValue, forKey: FINBOX_BANK_CONNECT_MOBILE_NUMBER)
+        }
+    }
+    
+    // AA Journey Mode
+    var aaJourneyMode: AAJourneyMode? {
+        get {
+            guard let journeyMode = userDefaults.object(forKey: FINBOX_BANK_CONNECT_AA_JOURNEY_MODE) as? String ?? nil else {
+                return nil
+            }
+            return AAJourneyMode(rawValue: journeyMode)
+        }
+        set {
+            userDefaults.set(newValue?.rawValue, forKey: FINBOX_BANK_CONNECT_AA_JOURNEY_MODE)
+        }
+    }
+    
+    // AA Recurring Tenure Month
+    var aaRecurringTenureMonthCount: Int? {
+        get {
+            return userDefaults.object(forKey: FINBOX_BANK_CONNECT_AA_RECURRING_TENURE_MONTH_COUNT) as? Int ?? nil
+        }
+        set {
+            userDefaults.set(newValue, forKey: FINBOX_BANK_CONNECT_AA_RECURRING_TENURE_MONTH_COUNT)
+        }
+    }
+    
+    // AA Recurring Frequency Unit
+    var aaRecurringFrequencyUnit: AARecurringFrequencyUnit? {
+        get {
+            guard let frequencyUnit = userDefaults.object(forKey: FINBOX_BANK_CONNECT_AA_RECURRING_FREQUENCY_UNIT) as? String ?? nil else {
+                return nil
+            }
+            return AARecurringFrequencyUnit(rawValue: frequencyUnit)
+        }
+        set {
+            userDefaults.set(newValue?.rawValue, forKey: FINBOX_BANK_CONNECT_AA_RECURRING_FREQUENCY_UNIT)
+        }
+    }
+    
+    
+    // AA Recurring Frequency Value
+    var aaRecurringFrequencyValue: Int? {
+        get {
+            return userDefaults.object(forKey: FINBOX_BANK_CONNECT_AA_RECURRING_FREQUENCY_VALUE) as? Int ?? nil
+        }
+        set {
+            userDefaults.set(newValue, forKey: FINBOX_BANK_CONNECT_AA_RECURRING_FREQUENCY_VALUE)
         }
     }
     
