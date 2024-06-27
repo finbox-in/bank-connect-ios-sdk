@@ -1,5 +1,10 @@
 #  CHANGELOG
 
+## 0.4.7
+
+Return Session Id
+
+
 ## 0.4.6
 
 Add AA config
