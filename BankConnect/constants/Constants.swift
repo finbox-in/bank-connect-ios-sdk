@@ -23,6 +23,7 @@ let FINBOX_BANK_CONNECT_AA_JOURNEY_MODE = "finbox-bank-connect-aa-journey-mode"
 let FINBOX_BANK_CONNECT_AA_RECURRING_TENURE_MONTH_COUNT = "finbox-bank-connect-aa-recurring-tenure-month-count"
 let FINBOX_BANK_CONNECT_AA_RECURRING_FREQUENCY_UNIT = "finbox-bank-connect-aa-recurring-frequency-unit"
 let FINBOX_BANK_CONNECT_AA_RECURRING_FREQUENCY_VALUE = "finbox-bank-connect-aa-recurring-frequency-value"
+let FINBOX_BANK_CONNECT_SESSION_ID = "finbox-bank-connect-session-id"
 
 // Callback Status
 let FINBOX_BC_EXIT = "exit"
