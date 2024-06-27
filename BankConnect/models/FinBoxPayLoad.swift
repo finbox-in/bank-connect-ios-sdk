@@ -22,6 +22,9 @@ public struct FinBoxPayload: Codable {
     /// Error Type
     public let errorType: String?
     
+    /// Session Id
+    public let sessionId: String?
+    
     /// Coding keys to map between property names and JSON keys.
     ///
     /// Used to handle any naming discrepancies between Swift and JSON.
@@ -30,5 +33,6 @@ public struct FinBoxPayload: Codable {
         case linkId
         case entityId
         case errorType = "error_type"
+        case sessionId = "session_id"
     }
 }
