@@ -55,8 +55,11 @@ class FinBoxWebViewHandler: NSObject, WKScriptMessageHandler {
     
     // Update the callback payload
     func setCallbackPayload(message: String?, eventResponse: WebEventResponse?) {
+        // Fetch session id from prefs
+        let sessionId = UserPreference().sessionId
+        
         // Generate the callback payload
-        let payload = FinBoxPayload(message: message, linkId: eventResponse?.payload.linkId, entityId: eventResponse?.payload.entityId, errorType: eventResponse?.payload.errorType)
+        let payload = FinBoxPayload(message: message, linkId: eventResponse?.payload.linkId, entityId: eventResponse?.payload.entityId, errorType: eventResponse?.payload.errorType, sessionId: sessionId)
 
         // Send callback to the caller
         self.bankResult(payload)

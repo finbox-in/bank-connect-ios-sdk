@@ -70,7 +70,7 @@ struct APIService {
                     // Convert the response to object
                     let sessionResponse: SessionResponse = try JSONDecoder().decode(SessionResponse.self, from: data)
                     
-                    let result = SessionResult(error: nil, sessionURL: sessionResponse.redirectUrl)
+                    let result = SessionResult(error: nil, sessionURL: sessionResponse.redirectUrl, sessionId: sessionResponse.sessionId)
                     
                     if (result.sessionURL == nil) {
                         self.handleClientError(completion: completion, error: "Session url is not present")
@@ -160,21 +160,21 @@ struct APIService {
     /// Handles client errors
     func handleClientError(completion: @escaping (SessionResult) -> Void, error: Any) {
         debugPrint("Response Error Client: \(error as Any)")
-        let result = SessionResult(error: String(describing: error), sessionURL: nil)
+        let result = SessionResult(error: String(describing: error), sessionURL: nil, sessionId: nil)
         sendCallback(completion: completion, result: result)
     }
     
     /// Handles server errors
     func handleServerError(completion: @escaping (SessionResult) -> Void, error: Any) {
         debugPrint("Response Error Server: \(String(describing: error))")
-        let result = SessionResult(error: String(describing: error), sessionURL: nil)
+        let result = SessionResult(error: String(describing: error), sessionURL: nil, sessionId: nil)
         sendCallback(completion: completion, result: result)
     }
     
     /// Handles generic errors
     func handleError(completion: @escaping (SessionResult) -> Void, error: Any) {
         debugPrint("Response Error Generic: \(String(describing: error))")
-        let result = SessionResult(error: String(describing: error), sessionURL: nil)
+        let result = SessionResult(error: String(describing: error), sessionURL: nil, sessionId: nil)
         sendCallback(completion: completion, result: result)
     }
     

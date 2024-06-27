@@ -177,4 +177,13 @@ class UserPreference {
             userDefaults.set(newValue, forKey: FINBOX_BANK_CONNECT_USER_TOKEN)
         }
     }
+    
+    var sessionId: String? {
+        get {
+            return userDefaults.object(forKey: FINBOX_BANK_CONNECT_SESSION_ID) as? String ?? nil
+        }
+        set {
+            userDefaults.set(newValue, forKey: FINBOX_BANK_CONNECT_SESSION_ID)
+        }
+    }
 }
