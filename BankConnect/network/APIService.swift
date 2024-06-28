@@ -83,10 +83,13 @@ struct APIService {
                 }
                 
             case 400...499:
-                // Client error (status code 400 to 499)
-                debugPrint("Client Error: \(httpResponse.statusCode)")
                 // Handle client error
-                self.handleClientError(completion: completion, error: error ?? "Client Error Occured")
+                debugPrint("Client Error: \(httpResponse.statusCode)")
+                var errorMessage: String? = nil
+                if let data = data, let errMessage = String(data: data, encoding: .utf8) {
+                    errorMessage = errMessage
+                }
+                self.handleClientError(completion: completion, error: errorMessage ?? "Client Error Occured")
                 
             case 500...599:
                 // Handle server error
