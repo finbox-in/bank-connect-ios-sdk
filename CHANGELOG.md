@@ -1,5 +1,9 @@
 #  CHANGELOG
 
+## 0.4.8
+
+Fix issues with Session Id
+
 ## 0.4.6
 
 Add AA config
