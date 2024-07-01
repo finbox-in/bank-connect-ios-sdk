@@ -40,7 +40,7 @@ struct ContentView: View {
             .mode(Mode.PDF)
             .journeyMode(JourneyMode.NORMAL)
             .mobileNumber("7978646904")
-            .aaJourneyMode(AAJourneyMode.ONCE_WITH_RECURRING)
+            .aaJourneyMode(AAJourneyMode.ONLY_ONCE)
             .aaRecurringFrequencyUnit(AARecurringFrequencyUnit.DAY)
             .aaRecurringFrequencyValue(3)
             .aaRecurringTenureMonthCount(2)
