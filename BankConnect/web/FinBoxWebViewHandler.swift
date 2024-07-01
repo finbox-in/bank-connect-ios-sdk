@@ -49,7 +49,7 @@ class FinBoxWebViewHandler: NSObject, WKScriptMessageHandler {
             debugPrint("Info Name", eventResponse.payload.eventName ?? "Failed to receive Event Name")
             debugPrint("Info Message", eventResponse.payload.message ?? "Failed to receive Message")
         } else {
-            debugPrint("Event Callback Status", eventResponse.status)
+            debugPrint("Event Callback Status", eventResponse.status ?? "")
         }
     }
     
