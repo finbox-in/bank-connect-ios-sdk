@@ -4,9 +4,10 @@
 
 Fix issues with Session Id
 
-## 0.4.6
+## 0.4.7
 
-Add AA config
+Return Session Id
+
 Make ProgressView visible on newer versions
 Remove unused or duplicate files
 
