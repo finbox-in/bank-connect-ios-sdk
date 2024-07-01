@@ -1,6 +1,6 @@
 #  CHANGELOG
 
-## 0.4.8
+## 0.4.9
 
 Fix issues with Session Id
 
