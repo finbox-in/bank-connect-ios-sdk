@@ -8,9 +8,9 @@
 /// Account Aggregator Journey Mode
 public enum AAJourneyMode: String {
     
-    /// Fetch once and Recurring from second time
-    case ONCE_WITH_RECURRING = "once_with_recurring"
+    /// Fetch only once
+    case ONLY_ONCE = "only_once"
     
     /// Only Recurring fetches
-    case ONLY_ONCE = "only_once"
+    case ONLY_RECURRING = "only_recurring"
 }
