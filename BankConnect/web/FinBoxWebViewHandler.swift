@@ -30,7 +30,7 @@ class FinBoxWebViewHandler: NSObject, WKScriptMessageHandler {
     // Parse the message body from the webview event
     func parseMessageBody(message: Any) throws {
         // Serialize the message data
-        let jsonData = try JSONSerialization.data(withJSONObject: message)
+        let jsonData = try JSONSerialization.data(withJSONObject: message, options: .prettyPrinted)
         // Convert the event response to struct
         let eventResponse = try JSONDecoder().decode(WebEventResponse.self, from: jsonData)
         
@@ -55,11 +55,8 @@ class FinBoxWebViewHandler: NSObject, WKScriptMessageHandler {
     
     // Update the callback payload
     func setCallbackPayload(message: String?, eventResponse: WebEventResponse?) {
-        // Fetch session id from prefs
-        let sessionId = UserPreference().sessionId
-        
         // Generate the callback payload
-        let payload = FinBoxPayload(message: message, linkId: eventResponse?.payload.linkId, entityId: eventResponse?.payload.entityId, errorType: eventResponse?.payload.errorType, sessionId: sessionId)
+        let payload = FinBoxPayload(message: message, linkId: eventResponse?.payload.linkId, entityId: eventResponse?.payload.entityId, errorType: eventResponse?.payload.errorType, sessionId: eventResponse?.payload.sessionId)
 
         // Send callback to the caller
         self.bankResult(payload)

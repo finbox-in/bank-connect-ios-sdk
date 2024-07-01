@@ -33,10 +33,10 @@ struct ContentView: View {
     
     func startBC() -> some View {
         let _ = BankConnect.Builder()
-            .apiKey(key: "YOUR_API_KEY")
-            .linkId(id: "UNIQUE_ID")
-            .fromDate(start: "DD/MM/YYYY")
-            .toDate(end: "DD/MM/YYYY")
+            .apiKey("YOUR_API_KEY")
+            .linkId("UNIQUE_ID")
+            .fromDate("DD/MM/YYYY")
+            .toDate("DD/MM/YYYY")
             .mode(Mode.PDF)
             .journeyMode(JourneyMode.NORMAL)
             .mobileNumber("7978646904")

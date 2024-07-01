@@ -15,6 +15,7 @@ struct WebEventPayload: Codable {
     let entityId: String?
     let reason: String?
     let errorType: String?
+    let sessionId: String?
     
     enum CodingKeys: String, CodingKey {
         case eventName = "event_name"
@@ -23,6 +24,7 @@ struct WebEventPayload: Codable {
         case entityId
         case reason
         case errorType = "error_type"
+        case sessionId = "sessionId"
     }
 }
 
