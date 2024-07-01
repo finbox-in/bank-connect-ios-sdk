@@ -12,5 +12,5 @@ public enum AAJourneyMode: String {
     case ONCE_WITH_RECURRING = "once_with_recurring"
     
     /// Only Recurring fetches
-    case ONLY_RECURRING = "only_recurring"
+    case ONLY_ONCE = "only_once"
 }

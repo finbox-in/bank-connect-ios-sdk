@@ -9,5 +9,6 @@
 public enum JourneyMode: String {
     case NORMAL = ""
     case MULTI_PDF = "multi_pdf"
+    case MULTI_BANKING = "multi_banking"
 }
 
