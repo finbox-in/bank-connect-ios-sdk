@@ -1,5 +1,8 @@
 #  CHANGELOG
 
+## 0.5.0
+Update Enums
+
 ## 0.4.9
 
 Fix issues with Session Id
