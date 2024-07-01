@@ -9,7 +9,8 @@ import Foundation
 
 /// Object for Web Events received as callbacks from webpage
 struct WebEventResponse: Codable {
-    let status: String
+    let status: String?
     let message: String?
+    let type: String?
     let payload: WebEventPayload
 }

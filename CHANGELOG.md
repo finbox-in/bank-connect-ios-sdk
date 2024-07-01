@@ -1,13 +1,16 @@
 #  CHANGELOG
 
+## 0.5.0
+Update Enums
+
+## 0.4.9
+
+Fix issues with Session Id
+
 ## 0.4.7
 
 Return Session Id
 
-
-## 0.4.6
-
-Add AA config
 Make ProgressView visible on newer versions
 Remove unused or duplicate files
 

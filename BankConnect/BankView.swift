@@ -17,8 +17,6 @@ public struct BankView: View {
     
     @ObservedObject var viewModel = SessionViewModel()
     
-    @State private var sessionId: String? = nil
-    
     /// This property tracks if the viewmodel is fetching session
     /// State marks this as mutable
     @State var fetchStarted = false
@@ -56,17 +54,12 @@ public struct BankView: View {
             viewModel.fetchSession{ result in
                 // API fetching completed
                 self.fetchStarted = result
-                // Update session id
-                sessionId = viewModel.sessionResult?.sessionId
-                
-                // Save session id to prefs
-                UserPreference().sessionId = sessionId ?? ""
             }
         })
     }
     
     func handleError(error: String) -> some View {
-        bankResult(FinBoxPayload(message: error, linkId: "", entityId: "", errorType: "", sessionId: sessionId))
+        bankResult(FinBoxPayload(message: error, linkId: "", entityId: "", errorType: "", sessionId: ""))
         return Text("\(String(describing: error))")
     }
 }

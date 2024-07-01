@@ -7,10 +7,6 @@
 
 /// Account Aggregator Recurring Pull Frequency Unit
 public enum AARecurringFrequencyUnit: String {
-    
-    /// Fetch AA hourly
-    case HOUR = "hour"
-    
     /// Fetch AA daily
     case DAY = "day"
     
