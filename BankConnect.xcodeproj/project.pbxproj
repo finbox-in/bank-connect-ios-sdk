@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		370AF8422C804E7A001CCBF3 /* WebViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370AF8412C804E7A001CCBF3 /* WebViewCoordinator.swift */; };
 		372AD9412B70C10A000996E1 /* SessionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372AD9402B70C10A000996E1 /* SessionResult.swift */; };
 		375869C52C29933000FEB54E /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375869C42C29933000FEB54E /* Mode.swift */; };
 		375869C72C299F1D00FEB54E /* AAJourneyMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375869C62C299F1D00FEB54E /* AAJourneyMode.swift */; };
@@ -40,7 +41,6 @@
 		6DA049CF2B6BDE8000DC2401 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 6DA049CE2B6BDE8000DC2401 /* CHANGELOG.md */; };
 		6DA049D12B6BDE8A00DC2401 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6DA049D02B6BDE8A00DC2401 /* LICENSE */; };
 		6DA049D32B6BDE9600DC2401 /* BankConnect.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6DA049D22B6BDE9600DC2401 /* BankConnect.podspec */; };
-		6DA049D52B6CC92F00DC2401 /* SessionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA049D42B6CC92F00DC2401 /* SessionResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +75,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		370AF8412C804E7A001CCBF3 /* WebViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewCoordinator.swift; sourceTree = "<group>"; };
 		372AD9402B70C10A000996E1 /* SessionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionResult.swift; sourceTree = "<group>"; };
 		375869C42C29933000FEB54E /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
 		375869C62C299F1D00FEB54E /* AAJourneyMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAJourneyMode.swift; sourceTree = "<group>"; };
@@ -268,6 +269,7 @@
 			children = (
 				6DA049B22B6BD9C300DC2401 /* FinBoxWebView.swift */,
 				6DA049B42B6BD9EB00DC2401 /* FinBoxWebViewHandler.swift */,
+				370AF8412C804E7A001CCBF3 /* WebViewCoordinator.swift */,
 			);
 			path = web;
 			sourceTree = "<group>";
@@ -460,6 +462,7 @@
 				375869C52C29933000FEB54E /* Mode.swift in Sources */,
 				6DA0499A2B6BD6D000DC2401 /* FinBoxPayload.swift in Sources */,
 				6DA049B32B6BD9C300DC2401 /* FinBoxWebView.swift in Sources */,
+				370AF8422C804E7A001CCBF3 /* WebViewCoordinator.swift in Sources */,
 				375869C72C299F1D00FEB54E /* AAJourneyMode.swift in Sources */,
 				6DA049972B6BD69300DC2401 /* BankConnect.swift in Sources */,
 				6DA049AD2B6BD98500DC2401 /* DateUtil.swift in Sources */,

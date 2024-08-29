@@ -23,6 +23,7 @@ struct FinBoxWebView: UIViewRepresentable {
         config.userContentController.add(FinBoxWebViewHandler(bankResult: self.bankResult), name: "BankConnectFlutter")
         
         let webView = WKWebView(frame: UIScreen.main.bounds, configuration: config)
+        webView.navigationDelegate = context.coordinator
         return webView
     }
     
@@ -34,5 +35,8 @@ struct FinBoxWebView: UIViewRepresentable {
         uiView.load(NetworkUtils.getRequest(urlStr: sessionUrl))
     }
     
+    func makeCoordinator() -> WebViewCoordinator {
+        return WebViewCoordinator(self)
+    }
 }
 

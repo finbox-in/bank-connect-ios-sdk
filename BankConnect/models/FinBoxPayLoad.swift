@@ -33,6 +33,6 @@ public struct FinBoxPayload: Codable {
         case linkId
         case entityId
         case errorType = "error_type"
-        case sessionId = "session_id"
+        case sessionId = "sessionId"
     }
 }
