@@ -1,6 +1,6 @@
 #  CHANGELOG
 
-## 0.5.2
+## 0.5.3
 
 Open links with single click
 
@@ -18,6 +18,7 @@ Update Enums
 ## 0.4.9
 
 Fix issues with Session Id
+
 
 ## 0.4.7
 
